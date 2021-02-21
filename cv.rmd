@@ -13,6 +13,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+<script async defer data-domain="lse.de" src="https://plausible.io/js/plausible.js"></script>
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
   results='asis', 
