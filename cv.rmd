@@ -57,11 +57,11 @@ Aside
 
 
 ```{r}
-if(params$pdf_mode){
-  cat("View this CV online with links at _lse.de/cv_")
-} else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://raw.githubusercontent.com/larnsce/cv/master/lars_schoebitz_cv.pdf)")
-}
+## if(params$pdf_mode){
+##   cat("View this CV online with links at _lse.de/cv_")
+## } else {
+##   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://raw.githubusercontent.com/larnsce/cv/master/lars_schoebitz_cv.pdf)")
+## }
 ```
 
 Contact {#contact}
@@ -79,7 +79,6 @@ CV %>% print_skill_bars()
 ```
 
 
-
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
@@ -88,8 +87,6 @@ Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
 The source code is available [on github.com/larnsce/cv](https://github.com/larnsce/cv).
 
 Last updated on `r Sys.Date()`.
-
-
 
 Main
 ================================================================================
@@ -102,13 +99,11 @@ Lars Schöbitz {#title}
 CV %<>% print_text_block("intro") 
 ```
 
-Me {data-icon=user-circle}
+Work Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
-
-CV %>% print_section("personal")
-
+CV %<>% print_section('work_experience')
 ```
 
 
@@ -120,102 +115,14 @@ CV %<>% print_section('education')
 ```
 
 
-
-Work Experience {data-icon=laptop}
---------------------------------------------------------------------------------
-::: aside
-```{r}
-CV %<>% print_text_block('sanitation_rights')
-```
-:::
-
-```{r}
-CV %<>% print_section('work_experience')
-```
-
-
-Teaching Experience {data-icon=briefcase}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('teaching')
-```
-
-Pro Bono {data-icon=briefcase}
---------------------------------------------------------------------------------
-
-::: aside
-I am passionate about teaching coding with R to novel users.
-:::
-
-```{r}
-CV %>% print_section('pro_bono_work')
-```
-
-
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-::: aside
-```{r}
-# CV %<>% print_text_block('teaching_experience_aside')
-```
-:::
-
-```{r}
-# CV %<>% print_section('teaching_positions')
-```
-
-
 Publications {data-icon=book}
 --------------------------------------------------------------------------------
-
-::: aside
-I support open science principles.
-:::
 
 ```{r}
 CV %>% 
   print_section('publications')
 ```
 
-Technical Reports {data-icon=bookmark}
---------------------------------------------------------------------------------
-
-::: aside
-I strive for efficiency and approach life with 'All or Nothing'.
-:::
-
-```{r}
-CV %>% 
-  print_section('technical_reports')
-```
-
-
-Sandec News Article {data-icon=book-open}
---------------------------------------------------------------------------------
-
-::: aside
-I have a mindset of learning from failures and am a signatory of the [Nakuru Accord](https://wash.leeds.ac.uk/failing-better-in-the-wash-sector/)
-:::
-
-```{r}
-CV %>% 
-  print_section('sandec_news')
-```
-
-Conferences & Seminars {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-::: aside
-I am optimistic, direct, patient and empathetic.
-:::
-
-
-```{r}
-CV %>% 
-  print_section('conferences_seminars')
-```
 
 References {data-icon=address-book}
 --------------------------------------------------------------------------------
