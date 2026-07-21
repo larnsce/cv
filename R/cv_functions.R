@@ -70,7 +70,7 @@ timeline <- function(start, end) {
     is.na(e)            ~ paste0(s, " - Current"),
     s == e             ~ e,
     is.na(s)            ~ e,
-    TRUE                ~ paste0(e, " - ", s)  # kept newest-left for consistency
+    TRUE                ~ paste0(s, " - ", e)  # chronological: earlier - later
   )
 }
 
