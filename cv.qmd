@@ -1,0 +1,124 @@
+---
+title: "Lars Schöbitz - CV"
+author: "Lars Schöbitz"
+date: today
+format:
+  html:
+    theme: [default, cv.scss]
+    toc: false
+    self-contained: true
+  typst:
+    papersize: a4
+    margin:
+      x: 1.6cm
+      y: 1.6cm
+    fontsize: 10pt
+execute:
+  echo: false
+  warning: false
+  message: false
+knitr:
+  opts_chunk:
+    dev: "ragg_png"
+---
+
+```{r setup}
+#| fig.keep: "none"
+knitr::opts_chunk$set(fig.keep = "none")
+source("R/cv_functions.R")
+cv <- create_cv("data")
+```
+
+```{r intro, results='asis'}
+print_text_block(cv, "intro")
+```
+
+## Contact {.contact}
+
+```{r contact, results='asis'}
+print_contact(cv)
+```
+
+## Languages {.skills}
+
+```{r skills, results='asis'}
+print_skills(cv)
+```
+
+# Work Experience {data-icon="laptop"}
+
+```{r work, results='asis'}
+print_section(cv, "work_experience")
+```
+
+# Education {data-icon="graduation-cap"}
+
+```{r education, results='asis'}
+print_section(cv, "education")
+```
+
+# Open Data & Software {data-icon="database"}
+
+::: aside
+```{r oda-aside, results='asis'}
+print_text_block(cv, "open_data_aside")
+```
+:::
+
+```{r open-data, results='asis'}
+print_section(cv, "open_data_software")
+```
+
+# Teaching {data-icon="chalkboard-teacher"}
+
+::: aside
+```{r teach-aside, results='asis'}
+print_text_block(cv, "teaching_aside")
+```
+:::
+
+```{r teaching, results='asis'}
+print_section(cv, "teaching")
+```
+
+# Workshops {data-icon="users"}
+
+```{r workshops, results='asis'}
+print_section(cv, "workshops")
+```
+
+# Talks {data-icon="microphone"}
+
+```{r talks, results='asis'}
+print_section(cv, "talks")
+```
+
+# Publications {data-icon="book"}
+
+```{r publications, results='asis'}
+print_section(cv, "publications")
+```
+
+# Conference Papers {data-icon="file-lines"}
+
+```{r conf-papers, results='asis'}
+print_section(cv, "conference_papers")
+```
+
+# Technical Reports {data-icon="bookmark"}
+
+```{r reports, results='asis'}
+print_section(cv, "technical_reports")
+```
+
+# Professional Roles {data-icon="award"}
+
+```{r roles, results='asis'}
+print_section(cv, "professional_roles")
+```
+
+# References {data-icon="address-book"}
+
+```{r references, results='asis'}
+print_section(cv, "references")
+```
