@@ -1,18 +1,21 @@
 ---
 title: "Lars Schöbitz - CV"
-author: "Lars Schöbitz"
-date: today
+pagetitle: "Lars Schöbitz - CV"
 format:
   html:
     theme: [default, cv.scss]
     toc: false
-    self-contained: true
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script async defer data-domain="lse.de" src="https://plausible.io/js/plausible.js"></script>
   typst:
     papersize: a4
     margin:
       x: 1.6cm
       y: 1.6cm
     fontsize: 10pt
+    include-in-header: typst-helpers.typ
 execute:
   echo: false
   warning: false
@@ -33,6 +36,22 @@ cv <- create_cv("data")
 print_text_block(cv, "intro")
 ```
 
+::: {.content-visible when-format="html"}
+[<i class="fa-solid fa-download"></i> Download this CV as a PDF](https://raw.githubusercontent.com/larnsce/cv/main/cv.pdf){.download-link}
+:::
+
+::: {.content-visible when-format="typst"}
+View this CV online with clickable links at [lse.de/cv](https://www.lse.de/cv).
+
+```{r band, results='asis'}
+print_band(cv)
+```
+
+:::
+
+::: {.content-visible when-format="html"}
+::: {.cv-sidebar}
+
 ## Contact {.contact}
 
 ```{r contact, results='asis'}
@@ -50,6 +69,9 @@ print_skills(cv, "technical")
 ```{r skills, results='asis'}
 print_skills(cv, "language")
 ```
+
+:::
+:::
 
 # Work Experience {data-icon="laptop"}
 
@@ -84,19 +106,19 @@ print_text_block(cv, "teaching_aside")
 :::
 
 ```{r teaching, results='asis'}
-print_section(cv, "teaching")
+print_section(cv, "teaching", style = "compact")
 ```
 
 # Workshops {data-icon="users"}
 
 ```{r workshops, results='asis'}
-print_section(cv, "workshops")
+print_section(cv, "workshops", style = "compact")
 ```
 
 # Talks {data-icon="microphone"}
 
 ```{r talks, results='asis'}
-print_section(cv, "talks")
+print_section(cv, "talks", style = "compact")
 ```
 
 # Publications {data-icon="book"}
