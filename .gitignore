@@ -46,3 +46,10 @@ po/*~
 
 # sheet
 .ghseet
+
+# quarto
+/.quarto/
+cv_files/
+
+# harvested staging data (regenerate with scripts/harvest.R)
+data/staging/
