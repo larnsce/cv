@@ -39,10 +39,16 @@ print_text_block(cv, "intro")
 print_contact(cv)
 ```
 
+## Technical Skills {.skills}
+
+```{r tech-skills, results='asis'}
+print_skills(cv, "technical")
+```
+
 ## Languages {.skills}
 
 ```{r skills, results='asis'}
-print_skills(cv)
+print_skills(cv, "language")
 ```
 
 # Work Experience {data-icon="laptop"}
