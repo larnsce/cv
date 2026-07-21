@@ -1,7 +1,6 @@
 ---
 title: "Lars Schöbitz - CV"
-author: "Lars Schöbitz"
-date: today
+pagetitle: "Lars Schöbitz - CV"
 format:
   html:
     theme: [default, cv.scss]
