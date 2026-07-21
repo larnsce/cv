@@ -14,9 +14,25 @@ data/*.csv  ->  R/cv_functions.R  ->  cv.qmd  ->  cv.html + cv.pdf
 
 - `data/entries.csv` - every job, project, publication, report, talk. The `section`
   column routes each row to a section in `cv.qmd`.
-- `data/contact_info.csv`, `data/language_skills.csv`, `data/text_blocks.csv` - supporting data.
+- `data/contact_info.csv`, `data/language_skills.csv`, `data/technical_skills.csv`,
+  `data/text_blocks.csv` - supporting data.
 - `data/braindump_entries.csv` - work-in-progress rows you fill in by hand (see
   `data/BRAINDUMP.md`). Rows still containing `TODO` are skipped automatically.
+- `typst-helpers.typ` - Typst helpers (Font Awesome contact lines, skill bars, and the
+  three-column header band) used only by the PDF output.
+
+## Layout
+
+Both outputs share the same CSV data but differ in layout by design:
+
+- **PDF** (Typst): a compact header band (contact, technical skills, languages in three
+  columns) under the intro, then sections flow full-width.
+- **HTML**: a three-column card at the top (contact with Font Awesome icons, skill bars,
+  languages), then sections below. Includes a "Download PDF" button and Plausible analytics.
+
+Long sections (`talks`, `teaching`, `workshops`) render as dense one-line-per-entry lists;
+the rest render as full entries with bullets. This is controlled by the `style` argument to
+`print_section()` in `cv.qmd`.
 
 ## Updating the CV
 

@@ -1,5 +1,87 @@
+/*-- scss:defaults --*/
+$accent: #5a5a5a;
+
 /*-- scss:rules --*/
-body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; }
-.skill-bar { color: white; padding: 0.1rem 0.4rem; margin: 0.15rem 0; border-radius: 3px; }
-h1 { border-bottom: 2px solid #969696; padding-bottom: 0.2rem; margin-top: 1.5rem; }
-h3 { margin-bottom: 0; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  color: #222;
+  line-height: 1.45;
+}
+
+// HTML header card: contact, technical skills and languages in three columns
+// across the top, below the intro. A reliable full-width card (no fragile float).
+.cv-sidebar {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.9fr;
+  gap: 1.5rem;
+  margin: 1rem 0 1.5rem;
+  padding: 1.2rem 1.4rem;
+  background: #f6f6f6;
+  border-radius: 6px;
+
+  // Each ## becomes a <section class="level2"> -> one grid column.
+  > section.level2 { min-width: 0; }
+
+  h2 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border: none;
+    margin: 0 0 0.5rem;
+    color: $accent;
+  }
+
+  ul { list-style: none; padding: 0; margin: 0; font-size: 0.85rem; }
+  li { margin: 0.25rem 0; }
+
+  .fa-solid, .fa-brands { width: 1.1em; color: $accent; }
+}
+
+// On narrow screens, stack the three columns.
+@media (max-width: 700px) {
+  .cv-sidebar { grid-template-columns: 1fr; }
+}
+
+.skill-bar {
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.45rem;
+  margin: 0.2rem 0;
+  border-radius: 3px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  border-bottom: 2px solid #969696;
+  padding-bottom: 0.15rem;
+  margin-top: 1.6rem;
+}
+
+h3 { font-size: 1.02rem; margin-bottom: 0; margin-top: 0.9rem; }
+
+// Compact list sections (talks, teaching, workshops) render as tight bullets.
+ul { margin-top: 0.3rem; }
+
+.aside {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
+a { color: #1a5e8a; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.download-link {
+  display: inline-block;
+  margin: 0.3rem 0 0.5rem;
+  padding: 0.35rem 0.8rem;
+  background: $accent;
+  color: white !important;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.download-link:hover { background: #333; text-decoration: none; }
