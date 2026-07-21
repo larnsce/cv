@@ -50,11 +50,14 @@ create_cv <- function(data_dir = "data") {
     ) |>
     arrange(desc(.end), desc(.start))
 
+  tech_path <- file.path(data_dir, "technical_skills.csv")
+
   list(
-    entries = entries,
-    skills  = rd("language_skills.csv"),
-    text    = rd("text_blocks.csv"),
-    contact = rd("contact_info.csv")
+    entries    = entries,
+    skills     = rd("language_skills.csv"),
+    tech_skills = if (file.exists(tech_path)) rd("technical_skills.csv") else NULL,
+    text       = rd("text_blocks.csv"),
+    contact    = rd("contact_info.csv")
   )
 }
 
@@ -105,10 +108,12 @@ print_contact <- function(cv) {
   invisible()
 }
 
-#' Print skill bars.
-print_skills <- function(cv, out_of = 5) {
-  for (i in seq_len(nrow(cv$skills))) {
-    r <- cv$skills[i, ]
+#' Print skill bars. `which` selects the table: "language" or "technical".
+print_skills <- function(cv, which = "language", out_of = 5) {
+  skills <- if (which == "technical") cv$tech_skills else cv$skills
+  if (is.null(skills) || nrow(skills) == 0) return(invisible())
+  for (i in seq_len(nrow(skills))) {
+    r <- skills[i, ]
     pct <- round(100 * as.numeric(r$level) / out_of)
     cat(glue(
       "<div class='skill-bar' style=\"background:linear-gradient(to right,",
