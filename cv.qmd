@@ -117,8 +117,20 @@ print_section(cv, "workshops", style = "compact")
 
 # Talks {data-icon="microphone"}
 
+::: aside
+```{r talks-aside, results='asis'}
+print_text_block(cv, "talks_aside")
+```
+:::
+
 ```{r talks, results='asis'}
 print_section(cv, "talks", style = "compact")
+```
+
+# Blog & Writing {data-icon="pen-nib"}
+
+```{r blog, results='asis'}
+print_section(cv, "blog", style = "compact")
 ```
 
 # Publications {data-icon="book"}
@@ -137,6 +149,24 @@ print_section(cv, "conference_papers")
 
 ```{r reports, results='asis'}
 print_section(cv, "technical_reports")
+```
+
+# Grants & Funding {data-icon="hand-holding-dollar"}
+
+::: aside
+```{r grants-aside, results='asis'}
+print_text_block(cv, "grants_aside")
+```
+:::
+
+```{r grants, results='asis'}
+print_section(cv, "grants")
+```
+
+# Awards {data-icon="trophy"}
+
+```{r awards, results='asis'}
+print_section(cv, "awards")
 ```
 
 # Professional Roles {data-icon="award"}
