@@ -31,11 +31,23 @@ create_cv <- function(data_dir = "data") {
     paste0("- ", paste(r, collapse = "\n- "))
   })
 
-  # Sort newest first by `end`, then `start`; blank end = current = top.
+  # Treat a literal "TODO" in a date field as "unknown", not as text.
+  entries$start <- ifelse(entries$start == "TODO", NA, entries$start)
+  entries$end   <- ifelse(entries$end   == "TODO", NA, entries$end)
+
+  # Sort newest first by `end`, then `start`. A blank end means either "current"
+  # (has a start) or "undated" (no start): current sorts to the top, undated to
+  # the bottom, so unfinished TODO-dated rows don't jump ahead of real entries.
   yr <- function(x) suppressWarnings(as.integer(str_extract(as.character(x), "(19|20)\\d{2}")))
   entries <- entries |>
-    mutate(.end = ifelse(is.na(end) | end == "", 9999L, yr(end)),
-           .start = yr(start)) |>
+    mutate(
+      .start = yr(start),
+      .end = dplyr::case_when(
+        !is.na(end) & end != "" ~ yr(end),
+        !is.na(.start)          ~ 9999L,   # current
+        TRUE                    ~ -1L       # undated -> bottom
+      )
+    ) |>
     arrange(desc(.end), desc(.start))
 
   list(

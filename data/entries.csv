@@ -17,3 +17,16 @@ open_data_software,"jmpwashdata - WHO/UNICEF JMP data",,"Author",2024,,"R packag
 open_data_software,"rstatsZH - R training for the Canton of Zurich",,"Course Creator & Instructor",2021,,"Built and ran the R training programme for the cantonal administration of Zurich (rstatsZH), including course website and material.",,,https://rstatszh.github.io/website/
 professional_roles,"Member, Data Stewardship Network",,"ETH Zurich",TODO,,"TODO: confirm start year and describe your role in the network.",,,
 professional_roles,"Local Node, Swiss Reproducibility Network (SwissRN)",,"ETH Zurich",TODO,,"Local node representative for SwissRN at ETH Zurich. TODO: confirm start year.",,,
+talks,"ReproducibiliTea Journal Club",,"University of Zurich",2026,2026,"Talk. TODO: confirm exact date.",,,https://ghe-open.ch/slides/reproducibilitea
+talks,"Swiss Open Academic Data (SOAD)",,"SOAD Conference",2025,2025,"Presentation at the Swiss Open Academic Data conference.",,,https://ghe-open.ch/slides/soad
+talks,"Computational Reproducibility Seminar",,"Swiss Reproducibility Network (SwissRN)",TODO,,"Seminar talk. TODO: confirm year.",,,https://ghe-open.ch/slides/swissrn-reproducibility
+talks,"Swiss Reproducibility Conference",,"Swiss Reproducibility Network (SwissRN)",2024,2024,"Conference presentation.",,,https://ghe-open.ch/slides/swissrn
+talks,"Swiss Research Data Day (SRDD)",,"SRDD",2024,2024,"Presentation at the Swiss Research Data Day.",,,https://ghe-open.ch/slides/srdd2024
+talks,"Metadata",,"ETH ORD Programme",TODO,,"Talk on metadata for the ETH Open Research Data programme. TODO: confirm year.",,,https://ghe-open.ch/slides/eth-ord-data
+talks,"Data Stewardship",,"ETH 17:15 Kolloquium",TODO,,"Kolloquium talk. TODO: confirm year.",,,https://ghe-open.ch/slides/eth-kolloquium
+talks,"Data Stewardship at the UZH and ETH",,,TODO,,"Talk on data stewardship at UZH and ETH. TODO: confirm year and venue.",,,https://ghe-open.ch/slides/data-steward-lschoebitz
+talks,"Research Software Engineering and Data Stewardship (Career Panel)",,"Career Panel",TODO,,"Career panel contribution. TODO: confirm year and venue.",,,https://ghe-open.ch/slides/career-panel
+workshops,"Education Workshop","Basel","Swiss Toxicology Society (SST)",TODO,,"Educational workshop. TODO: confirm year.",,,https://ghe-open.ch/slides/d04-sst-workshop-basel
+workshops,"Research Data Management Summer School",,"ETH Zurich",2023,2023,"RDM summer school teaching.",,,https://ghe-open.ch/slides/d02-eth-rdm-summer-2023
+workshops,"Reference Management with Zotero",,"Hubris to Hope",2023,2023,"Workshop on reference management with Zotero.",,,https://ghe-open.ch/slides/d03-hubris-to-hope-reference-management.html
+workshops,"Data Stewardship Network Kick-off",,"ETH Zurich",TODO,,"Contribution to the ETH Data Stewardship Network kick-off. TODO: confirm year.",,,https://ghe-open.ch/slides/d01-eth-dsn-meeting
