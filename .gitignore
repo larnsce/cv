@@ -51,8 +51,10 @@ po/*~
 /cv_files/
 /cv-pdf_files/
 
-# Typst PDF intermediates (cv.pdf itself is kept; the .typ intermediate is not)
+# Typst PDF build outputs at root: render.sh builds /cv.pdf and the site render
+# copies it into docs/cv.pdf, which is the single tracked copy.
 cv-pdf.typ
+/cv.pdf
 
 # stray R plotting artifact from the fig.keep chunk option
 Rplots.pdf

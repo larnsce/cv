@@ -42,12 +42,13 @@ Every website page is a thin `.qmd` that sources the R helpers, calls
 - `data/braindump_entries.csv` - work-in-progress rows you fill in by hand; rows still
   containing `TODO` are skipped automatically.
 
-### Styling
+### Assets
 
-- `styles.css` - site chrome and list patterns (navbar, `pub-list`, `pub-tag`,
+- `assets/styles.css` - site chrome and list patterns (navbar, `pub-list`, `pub-tag`,
   `media-list`, `teaching-table`, `section-intro`, `cv-download-btn`, skill bars).
-- `typst-helpers.typ` - Typst helpers (Font Awesome contact lines, skill bars, header
-  band) used only by the PDF (`cv-pdf.qmd`).
+- `assets/typst-helpers.typ` - Typst helpers (Font Awesome contact lines, skill bars,
+  header band) used only by the PDF (`cv-pdf.qmd`).
+- `assets/profile-lars-schoebitz.jpg` - profile photo (About page and favicon).
 
 ## Building
 
@@ -55,9 +56,11 @@ Every website page is a thin `.qmd` that sources the R helpers, calls
 ./render.sh
 ```
 
-This runs two steps: it renders `cv-pdf.qmd` to `cv.pdf`, then renders the website into
-`docs/` (which picks up `cv.pdf` as a declared resource so the CV page's download button
-resolves). `docs/` is committed and is the GitHub Pages source.
+This runs two steps: it renders `cv-pdf.qmd` to `cv.pdf` at the repo root, then renders
+the website into `docs/` (which picks up `cv.pdf` as a declared resource so the CV
+page's download button resolves). The root `cv.pdf` is a gitignored build intermediate;
+`docs/cv.pdf` is the single tracked copy. `docs/` is committed and is what Netlify
+serves.
 
 To refresh harvested source data (optional): `Rscript scripts/harvest.R` re-pulls ORCID
 works and GitHub org repos into `data/staging/` for review. Curated content stays in
@@ -65,12 +68,15 @@ works and GitHub org repos into `data/staging/` for review. Curated content stay
 
 ## Deploy
 
-- GitHub Pages: Settings → Pages → Source: `main` branch, `/docs` folder.
-- Custom domain: `CNAME` contains `www.lse.de`; point that DNS record at GitHub Pages.
+- Netlify serves the pre-built `docs/` folder from `main` (`netlify.toml`: publish
+  `docs`, no build command). Merging a PR into `main` triggers a redeploy.
+- Custom domain: `www.lse.de` (primary) and `lse.de`, configured in Netlify's domain
+  settings; DNS A records at hosttech point both at Netlify.
 
 ## Data sources
 
-- Publications, reports, software, datasets: ORCID `0000-0003-2196-5015`.
+- Publications, reports, software, datasets: ORCID `0000-0003-2196-5015`, cross-checked
+  against the Zotero export `data/my-articles.bib`.
 - Open-data projects & packages: GitHub orgs (openwashdata, rstatsZH,
   Global-Health-Engineering, ethopen).
 - Roles, courses, workshops, education, media: hand-entered (`data/BRAINDUMP.md`).

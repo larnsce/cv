@@ -15,7 +15,7 @@ project:
 website:
   title: "Lars Schöbitz"
   site-url: "https://www.lse.de"
-  favicon: profile-lars-schoebitz.jpg
+  favicon: assets/profile-lars-schoebitz.jpg
   navbar:
     background: light
     left:
@@ -40,7 +40,7 @@ website:
 format:
   html:
     theme: cosmo
-    css: styles.css
+    css: assets/styles.css
     toc: false
     link-external-newwindow: true
     include-in-header:

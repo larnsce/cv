@@ -1,7 +1,7 @@
 ---
 title: "Lars Schöbitz"
 subtitle: "Open Science Specialist · ETH Zurich"
-image: profile-lars-schoebitz.jpg
+image: assets/profile-lars-schoebitz.jpg
 about:
   template: trestles
   image-shape: round
