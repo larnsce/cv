@@ -1,0 +1,5 @@
+# Netlify serves the pre-built Quarto site committed under docs/.
+# The site is built locally with ./render.sh; Netlify does not build it.
+[build]
+  publish = "docs"
+  command = ""

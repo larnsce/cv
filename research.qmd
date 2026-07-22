@@ -1,0 +1,49 @@
+---
+title: "Research"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+```{r setup}
+#| include: false
+source("R/cv_functions.R")
+cv <- create_cv("data")
+```
+
+::: {.section-intro}
+```{r intro, results='asis'}
+print_text_block(cv, "research_intro")
+```
+:::
+
+## Research Interests
+
+```{r interests, results='asis'}
+print_text_block(cv, "research_interests")
+```
+
+## Peer-Reviewed Articles
+
+```{r articles, results='asis'}
+print_pub_list(cv, "publications", type = "article", numbered = TRUE)
+```
+
+## Conference Papers
+
+```{r conf, results='asis'}
+print_pub_list(cv, "conference_papers")
+```
+
+## Technical Reports
+
+```{r reports, results='asis'}
+print_pub_list(cv, "technical_reports", link_label = "link")
+```
+
+## Field Research
+
+```{r field, results='asis'}
+print_text_block(cv, "field_research")
+```
