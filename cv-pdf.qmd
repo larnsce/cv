@@ -8,7 +8,7 @@ format:
       x: 1.6cm
       y: 1.6cm
     fontsize: 10pt
-    include-in-header: typst-helpers.typ
+    include-in-header: assets/typst-helpers.typ
 execute:
   echo: false
   warning: false
