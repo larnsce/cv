@@ -1,0 +1,15 @@
+{
+  "hash": "3108e426edd0f914b1a308863ee84eb3",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Lars Schöbitz\"\nsubtitle: \"Open Science Specialist · ETH Zurich\"\nimage: image_lars.jpg\nabout:\n  template: trestles\n  image-shape: round\n  links:\n    - icon: envelope\n      text: Email\n      href: mailto:lars@lse.de\n    - text: Website\n      href: https://www.lse.de\n    - text: ORCID\n      href: https://orcid.org/0000-0003-2196-5015\n    - icon: github\n      text: GitHub\n      href: https://github.com/larnsce\n    - icon: linkedin\n      text: LinkedIn\n      href: https://www.linkedin.com/in/larsschoebitz\nformat:\n  html:\n    toc: false\n---\n\n\n\nEnvironmental engineer and data scientist working in the global water, sanitation and health (WASH) sector. Open Science Specialist at ETH Zurich. I develop data science training, build open-data communities, and provide consulting to help manage the world's sanitation challenges. My work spans every sector under the sun, which has made me highly adaptable and empathetic.\n\nI lead [openwashdata](https://openwashdata.org), a global open-data community for the water, sanitation and hygiene (WASH) sector, and I teach reproducible data science with R and Quarto. My background is in environmental and hygiene engineering, with field research on faecal sludge management across Uganda, Vietnam, Haiti and South Africa.\n\nUse the navigation above to explore my [research](research.qmd), [software and open data](software.qmd), [teaching](teaching.qmd), and [media](media.qmd), or read the full [CV](cv.qmd).\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

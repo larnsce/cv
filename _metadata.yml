@@ -1,0 +1,10 @@
+# Shared execute/knitr defaults for every website page. Each page starts with a
+# setup chunk that sources R/cv_functions.R and builds `cv` via create_cv("data").
+execute:
+  echo: false
+  warning: false
+  message: false
+knitr:
+  opts_chunk:
+    dev: "ragg_png"
+    fig.keep: "none"

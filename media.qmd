@@ -1,0 +1,30 @@
+---
+title: "Media"
+format:
+  html:
+    toc: false
+---
+
+```{r setup}
+#| include: false
+source("R/cv_functions.R")
+cv <- create_cv("data")
+```
+
+::: {.section-intro}
+```{r intro, results='asis'}
+print_text_block(cv, "media_intro")
+```
+:::
+
+## Press
+
+```{r press, results='asis'}
+print_media(cv, kind = "press")
+```
+
+## Video & Recordings
+
+```{r video, results='asis'}
+print_media(cv, kind = c("video", "tv"))
+```

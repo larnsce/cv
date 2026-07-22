@@ -1,181 +1,68 @@
 ---
-title: "Lars Schöbitz - CV"
-pagetitle: "Lars Schöbitz - CV"
+title: "Curriculum Vitae"
 format:
   html:
-    theme: [default, cv.scss]
-    toc: false
-    include-in-header:
-      text: |
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <script async defer data-domain="lse.de" src="https://plausible.io/js/plausible.js"></script>
-  typst:
-    papersize: a4
-    margin:
-      x: 1.6cm
-      y: 1.6cm
-    fontsize: 10pt
-    include-in-header: typst-helpers.typ
-execute:
-  echo: false
-  warning: false
-  message: false
-knitr:
-  opts_chunk:
-    dev: "ragg_png"
+    toc: true
+    toc-depth: 2
 ---
 
 ```{r setup}
-#| fig.keep: "none"
-knitr::opts_chunk$set(fig.keep = "none")
+#| include: false
 source("R/cv_functions.R")
 cv <- create_cv("data")
 ```
 
-```{r intro, results='asis'}
-print_text_block(cv, "intro")
-```
+<a href="cv.pdf" class="cv-download-btn" download>&darr; Download CV (PDF)</a>
 
-::: {.content-visible when-format="html"}
-[<i class="fa-solid fa-download"></i> Download this CV as a PDF](https://raw.githubusercontent.com/larnsce/cv/main/cv.pdf){.download-link}
-:::
+This page is a summary. The full lists live on the [Research](research.qmd), [Software & Data](software.qmd), and [Teaching & Talks](teaching.qmd) pages, or in the PDF above.
 
-::: {.content-visible when-format="typst"}
-View this CV online with clickable links at [lse.de/cv](https://www.lse.de/cv).
-
-```{r band, results='asis'}
-print_band(cv)
-```
-
-:::
-
-::: {.content-visible when-format="html"}
-::: {.cv-sidebar}
-
-## Contact {.contact}
-
-```{r contact, results='asis'}
-print_contact(cv)
-```
-
-## Technical Skills {.skills}
-
-```{r tech-skills, results='asis'}
-print_skills(cv, "technical")
-```
-
-## Languages {.skills}
-
-```{r skills, results='asis'}
-print_skills(cv, "language")
-```
-
-:::
-:::
-
-# Work Experience {data-icon="laptop"}
+## Work Experience
 
 ```{r work, results='asis'}
-print_section(cv, "work_experience")
+print_section(cv, "work_experience", limit = 6)
 ```
 
-# Education {data-icon="graduation-cap"}
+## Education
 
 ```{r education, results='asis'}
 print_section(cv, "education")
 ```
 
-# Open Data & Software {data-icon="database"}
-
-::: aside
-```{r oda-aside, results='asis'}
-print_text_block(cv, "open_data_aside")
-```
-:::
-
-```{r open-data, results='asis'}
-print_section(cv, "open_data_software")
-```
-
-# Teaching {data-icon="chalkboard-teacher"}
-
-::: aside
-```{r teach-aside, results='asis'}
-print_text_block(cv, "teaching_aside")
-```
-:::
-
-```{r teaching, results='asis'}
-print_section(cv, "teaching", style = "compact")
-```
-
-# Workshops {data-icon="users"}
-
-```{r workshops, results='asis'}
-print_section(cv, "workshops", style = "compact")
-```
-
-# Talks {data-icon="microphone"}
-
-::: aside
-```{r talks-aside, results='asis'}
-print_text_block(cv, "talks_aside")
-```
-:::
-
-```{r talks, results='asis'}
-print_section(cv, "talks", style = "compact")
-```
-
-# Blog & Writing {data-icon="pen-nib"}
-
-```{r blog, results='asis'}
-print_section(cv, "blog", style = "compact")
-```
-
-# Publications {data-icon="book"}
+## Selected Publications
 
 ```{r publications, results='asis'}
-print_section(cv, "publications")
+print_pub_list(cv, "publications", type = "article", numbered = TRUE, limit = 5)
 ```
 
-# Conference Papers {data-icon="file-lines"}
-
-```{r conf-papers, results='asis'}
-print_section(cv, "conference_papers")
-```
-
-# Technical Reports {data-icon="bookmark"}
-
-```{r reports, results='asis'}
-print_section(cv, "technical_reports")
-```
-
-# Grants & Funding {data-icon="hand-holding-dollar"}
-
-::: aside
-```{r grants-aside, results='asis'}
-print_text_block(cv, "grants_aside")
-```
-:::
+## Selected Grants & Awards
 
 ```{r grants, results='asis'}
-print_section(cv, "grants")
+print_section(cv, "grants", limit = 3)
 ```
-
-# Awards {data-icon="trophy"}
 
 ```{r awards, results='asis'}
 print_section(cv, "awards")
 ```
 
-# Professional Roles {data-icon="award"}
+## Professional Roles
 
 ```{r roles, results='asis'}
 print_section(cv, "professional_roles")
 ```
 
-# References {data-icon="address-book"}
+## Technical Skills
+
+```{r tech-skills, results='asis'}
+print_skills(cv, "technical")
+```
+
+## Languages
+
+```{r langs, results='asis'}
+print_skills(cv, "language")
+```
+
+## References
 
 ```{r references, results='asis'}
 print_section(cv, "references")

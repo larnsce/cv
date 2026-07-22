@@ -50,12 +50,14 @@ create_cv <- function(data_dir = "data") {
     ) |>
     arrange(desc(.end), desc(.start))
 
-  tech_path <- file.path(data_dir, "technical_skills.csv")
+  tech_path  <- file.path(data_dir, "technical_skills.csv")
+  media_path <- file.path(data_dir, "media.csv")
 
   list(
     entries    = entries,
     skills     = rd("language_skills.csv"),
     tech_skills = if (file.exists(tech_path)) rd("technical_skills.csv") else NULL,
+    media      = if (file.exists(media_path)) rd("media.csv") else NULL,
     text       = rd("text_blocks.csv"),
     contact    = rd("contact_info.csv")
   )
@@ -77,9 +79,12 @@ timeline <- function(start, end) {
 #' Print one section of entries as markdown (call with results='asis').
 #' @param style "block" = full entry with bullets (work, education, open data);
 #'   "compact" = one dense line per entry (talks, teaching, workshops).
-print_section <- function(cv, section_id, style = "block") {
+#' @param limit optional integer: keep only the first `limit` entries after
+#'   sorting (used for "top N" summaries on the website CV page).
+print_section <- function(cv, section_id, style = "block", limit = NULL) {
   d <- dplyr::filter(cv$entries, section == section_id)
   if (nrow(d) == 0) return(invisible())
+  if (!is.null(limit) && nrow(d) > limit) d <- utils::head(d, limit)
   d$tl <- timeline(d$start, d$end)
 
   if (style == "compact") {
@@ -203,5 +208,82 @@ print_skills <- function(cv, which = "language", out_of = 5) {
     }
     cat("```\n\n")
   }
+  invisible()
+}
+
+#' Print a publication-style list as an HTML <ul class="pub-list"> (call with
+#' results='asis'). Reads title, `institution` (used as the journal/venue slot),
+#' the year from `start`, `url` (rendered as a [DOI] link), and the optional
+#' `status` column (rendered as a coloured pub-tag). Newest first.
+#'
+#' @param cv the list from create_cv().
+#' @param section_id which entries.csv section to render.
+#' @param type optional character vector: keep only rows whose `type` is in this
+#'   set (e.g. "article", "report"). NULL keeps all rows in the section.
+#' @param numbered if TRUE, prefix each item with a bold reverse index.
+#' @param limit optional integer: keep only the first `limit` entries.
+#' @param link_label label for the url link (default "DOI").
+print_pub_list <- function(cv, section_id, type = NULL, numbered = FALSE,
+                           limit = NULL, link_label = "DOI") {
+  d <- dplyr::filter(cv$entries, section == section_id)
+  if (!is.null(type) && "type" %in% names(d)) {
+    keep <- type
+    d <- dplyr::filter(d, !is.na(.data$type) & .data$type %in% keep)
+  }
+  if (nrow(d) == 0) return(invisible())
+  if (!is.null(limit) && nrow(d) > limit) d <- utils::head(d, limit)
+
+  status_tag <- function(s) {
+    if (is.na(s) || s == "") return("")
+    cls <- if (grepl("review", s, ignore.case = TRUE)) "tag-review" else "tag-wip"
+    sprintf(" <span class=\"pub-tag %s\">%s</span>", cls, s)
+  }
+
+  n <- nrow(d)
+  cat("\n<ul class=\"pub-list\">\n")
+  for (i in seq_len(n)) {
+    r <- d[i, ]
+    yr    <- if (!is.na(r$start) && r$start != "") sprintf(" (%s)", r$start) else ""
+    venue <- if (!is.na(r$institution) && r$institution != "")
+      sprintf(" *%s*.", r$institution) else ""
+    link  <- if (!is.na(r$url) && r$url != "")
+      sprintf(" [%s](%s)", link_label, r$url) else ""
+    num   <- if (numbered) sprintf("**%d.** ", n - i + 1) else ""
+    tag   <- if ("status" %in% names(r)) status_tag(r$status) else ""
+    cat(sprintf("<li>%s%s%s%s%s%s</li>\n",
+                num, r$title, yr, venue, link, tag))
+  }
+  cat("</ul>\n\n")
+  invisible()
+}
+
+#' Print media coverage as an HTML <ul class="media-list"> (call with
+#' results='asis'). Reads data/media.csv (outlet, date, kind, title, url).
+#'
+#' @param cv the list from create_cv().
+#' @param kind optional character vector to filter by `kind`
+#'   (press, radio, podcast, video, tv). NULL keeps all rows.
+print_media <- function(cv, kind = NULL) {
+  m <- cv$media
+  if (is.null(m) || nrow(m) == 0) return(invisible())
+  if (!is.null(kind)) {
+    keep <- kind
+    m <- dplyr::filter(m, .data$kind %in% keep)
+  }
+  if (nrow(m) == 0) return(invisible())
+  # Newest first by date string (YYYY or YYYY-MM sort lexically as intended).
+  m <- m[order(as.character(m$date), decreasing = TRUE), ]
+
+  cat("\n<ul class=\"media-list\">\n")
+  for (i in seq_len(nrow(m))) {
+    r <- m[i, ]
+    title <- if (!is.na(r$url) && r$url != "")
+      sprintf("[%s](%s)", r$title, r$url) else r$title
+    date  <- if (!is.na(r$date) && r$date != "")
+      sprintf("<span class=\"media-date\">%s</span>", r$date) else ""
+    cat(sprintf("<li><span class=\"media-outlet\">%s</span>%s<br>%s</li>\n",
+                r$outlet, date, title))
+  }
+  cat("</ul>\n\n")
   invisible()
 }

@@ -1,0 +1,53 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - research.qmd
+    - software.qmd
+    - teaching.qmd
+    - media.qmd
+    - blog.qmd
+    - cv.qmd
+  resources:
+    - cv.pdf
+    - CNAME
+
+website:
+  title: "Lars Schöbitz"
+  site-url: "https://www.lse.de"
+  favicon: image_lars.jpg
+  navbar:
+    background: light
+    left:
+      - href: index.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: software.qmd
+        text: Software & Data
+      - href: teaching.qmd
+        text: Teaching
+      - href: media.qmd
+        text: Media
+      - href: cv.qmd
+        text: CV
+      - href: blog.qmd
+        text: Blog
+  page-footer:
+    center: "Lars Schöbitz · Open Science Specialist · ETH Zurich · [lars@lse.de](mailto:lars@lse.de)"
+    background: light
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    link-external-newwindow: true
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script async defer data-domain="lse.de" src="https://plausible.io/js/plausible.js"></script>
+
+execute:
+  freeze: auto

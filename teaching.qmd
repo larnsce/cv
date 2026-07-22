@@ -1,0 +1,43 @@
+---
+title: "Teaching & Talks"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+```{r setup}
+#| include: false
+source("R/cv_functions.R")
+cv <- create_cv("data")
+```
+
+::: {.section-intro}
+```{r intro, results='asis'}
+print_text_block(cv, "teaching_intro")
+```
+:::
+
+## Courses
+
+```{r teaching, results='asis'}
+print_section(cv, "teaching", style = "compact")
+```
+
+## Workshops
+
+```{r workshops, results='asis'}
+print_section(cv, "workshops", style = "compact")
+```
+
+## Talks & Invited Presentations
+
+::: aside
+```{r talks-aside, results='asis'}
+print_text_block(cv, "talks_aside")
+```
+:::
+
+```{r talks, results='asis'}
+print_section(cv, "talks", style = "compact")
+```
