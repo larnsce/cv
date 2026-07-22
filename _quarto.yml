@@ -15,7 +15,7 @@ project:
 website:
   title: "Lars Schöbitz"
   site-url: "https://www.lse.de"
-  favicon: image_lars.jpg
+  favicon: profile-lars-schoebitz.jpg
   navbar:
     background: light
     left:

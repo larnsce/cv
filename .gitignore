@@ -60,3 +60,5 @@ Rplots.pdf
 # harvested staging data (regenerate with scripts/harvest.R)
 data/staging/
 **/*.quarto_ipynb
+
+.DS_Store
