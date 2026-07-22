@@ -11,7 +11,6 @@ project:
     - cv.qmd
   resources:
     - cv.pdf
-    - CNAME
 
 website:
   title: "Lars Schöbitz"
