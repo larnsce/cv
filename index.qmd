@@ -34,6 +34,8 @@ cv <- create_cv("data")
 print_text_block(cv, "intro")
 ```
 
-I lead [openwashdata](https://openwashdata.org), a global open-data community for the water, sanitation and hygiene (WASH) sector, and I teach reproducible data science with R and Quarto. My background is in environmental and hygiene engineering, with field research on faecal sludge management across Uganda, Vietnam, Haiti and South Africa.
+At ETH Zurich's [Global Health Engineering](https://ghe.ethz.ch) group I founded and lead [openwashdata](https://openwashdata.org), a global community that publishes WASH-sector data as documented, FAIR R packages. I wrote and manage a portfolio of ETH Board Open Research Data grants behind this work, and in 2024 openwashdata received the [National Prize for Open Research Data](https://mavt.ethz.ch/news-and-events/d-mavt-news/2024/12/national-prize-for-open-research-data.html). I am a data steward in ETH's Data Stewardship Network and the local node leader for the Swiss Reproducibility Network at ETH.
+
+I also teach data science with R and Quarto, from graduate courses at ETH Zurich and CU Boulder to free online cohorts (ds4owd) reaching hundreds of participants worldwide, and I build the R tooling ([washr](https://openwashdata.github.io/washr/), [fairenough](https://openwashdata.github.io/fairenough/), [jmpwashdata](https://github.com/larnsce/jmpwashdata)) that makes open data easier to publish. My background is in environmental and hygiene engineering, with field research on city-wide sanitation and faecal sludge management across Uganda, Tanzania, Vietnam, Bangladesh, India, Bhutan, Haiti and South Africa.
 
 Use the navigation above to explore my [research](research.qmd), [software and open data](software.qmd), [teaching](teaching.qmd), and [media](media.qmd), or read the full [CV](cv.qmd).
