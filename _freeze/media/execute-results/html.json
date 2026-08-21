@@ -1,9 +1,11 @@
 {
-  "hash": "90f005e034aa5740f44ef62dde1620f5",
+  "hash": "ad900e6ac7d356d63cab0b81f4319bb8",
   "result": {
     "engine": "knitr",
     "markdown": "---\ntitle: \"Media\"\nformat:\n  html:\n    toc: false\n---\n\n\n\n::: {.section-intro}\nSelected coverage, recordings and video features of my work on open research data and sanitation.\n:::\n\n## Press\n\n\n<ul class=\"media-list\">\n<li><span class=\"media-outlet\">ETH Zurich (D-MAVT News)</span><span class=\"media-date\">2024-12</span><br>[National Prize for Open Research Data 2024 awarded to openwashdata](https://mavt.ethz.ch/news-and-events/d-mavt-news/2024/12/national-prize-for-open-research-data.html)</li>\n</ul>\n\n## Video & Recordings\n\n\n<ul class=\"media-list\">\n<li><span class=\"media-outlet\">ETH Library 17:15 Kolloquium</span><span class=\"media-date\">2024-11</span><br>[Plan for tomorrow today - a model for data stewardship](https://www.youtube.com/watch?v=zpVo_-Ne91c)</li>\n<li><span class=\"media-outlet\">Swiss Academies of Arts and Sciences</span><span class=\"media-date\">2024</span><br>[National Prize for Open Research Data 2024 - openwashdata prize video](https://www.youtube.com/watch?v=590qPtQNCD0)</li>\n</ul>\n",
-    "supporting": [],
+    "supporting": [
+      "media_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

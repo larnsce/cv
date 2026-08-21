@@ -1,43 +1,29 @@
 # cv_functions.R
-# Read CV data from data/*.csv and render sections as markdown.
-# Replaces the old cv_printing_functions.r (Google Sheets) with a CSV-backed version.
+# Read CV data from the aboutme data package and render sections as markdown.
+# The package (github.com/larnsce/aboutme) is the canonical source; install it
+# on the rendering machine before running ./render.sh.
 
 suppressPackageStartupMessages({
   library(dplyr)
-  library(readr)
   library(glue)
   library(stringr)
 })
 
-#' Load all CV data from the data/ folder into a list.
-create_cv <- function(data_dir = "data") {
-  rd <- function(f) suppressMessages(read_csv(file.path(data_dir, f), show_col_types = FALSE))
-
-  entries <- rd("entries.csv")
-
-  # Merge in the brain-dump entries once their TODOs are filled.
-  bd_path <- file.path(data_dir, "braindump_entries.csv")
-  if (file.exists(bd_path)) {
-    bd <- suppressMessages(read_csv(bd_path, show_col_types = FALSE))
-    bd <- dplyr::filter(bd, !dplyr::if_any(dplyr::everything(), ~ .x == "TODO"))
-    if (nrow(bd) > 0) entries <- dplyr::bind_rows(entries, bd)
-  }
+#' Load all CV data from the aboutme data package into a list.
+create_cv <- function() {
+  entries <- aboutme::entries
 
   # Collapse description_1..N into a single bulleted block.
   desc_cols <- grep("^description", names(entries), value = TRUE)
   entries$bullets <- apply(entries[desc_cols], 1, function(r) {
-    r <- r[!is.na(r) & r != "" & r != "TODO"]
+    r <- r[!is.na(r) & r != ""]
     if (length(r) == 0) return("")
     paste0("- ", paste(r, collapse = "\n- "))
   })
 
-  # Treat a literal "TODO" in a date field as "unknown", not as text.
-  entries$start <- ifelse(entries$start == "TODO", NA, entries$start)
-  entries$end   <- ifelse(entries$end   == "TODO", NA, entries$end)
-
   # Sort newest first by `end`, then `start`. A blank end means either "current"
   # (has a start) or "undated" (no start): current sorts to the top, undated to
-  # the bottom, so unfinished TODO-dated rows don't jump ahead of real entries.
+  # the bottom.
   yr <- function(x) suppressWarnings(as.integer(str_extract(as.character(x), "(19|20)\\d{2}")))
   entries <- entries |>
     mutate(
@@ -50,16 +36,13 @@ create_cv <- function(data_dir = "data") {
     ) |>
     arrange(desc(.end), desc(.start))
 
-  tech_path  <- file.path(data_dir, "technical_skills.csv")
-  media_path <- file.path(data_dir, "media.csv")
-
   list(
-    entries    = entries,
-    skills     = rd("language_skills.csv"),
-    tech_skills = if (file.exists(tech_path)) rd("technical_skills.csv") else NULL,
-    media      = if (file.exists(media_path)) rd("media.csv") else NULL,
-    text       = rd("text_blocks.csv"),
-    contact    = rd("contact_info.csv")
+    entries     = entries,
+    skills      = aboutme::language_skills,
+    tech_skills = aboutme::technical_skills,
+    media       = aboutme::media,
+    text        = aboutme::text_blocks,
+    contact     = aboutme::contact_info
   )
 }
 

@@ -9,7 +9,7 @@ format:
 ```{r setup}
 #| include: false
 source("R/cv_functions.R")
-cv <- create_cv("data")
+cv <- create_cv()
 ```
 
 <a href="cv.pdf" class="cv-download-btn" download>&darr; Download CV (PDF)</a>
@@ -60,10 +60,4 @@ print_skills(cv, "technical")
 
 ```{r langs, results='asis'}
 print_skills(cv, "language")
-```
-
-## References
-
-```{r references, results='asis'}
-print_section(cv, "references")
 ```
