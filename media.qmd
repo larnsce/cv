@@ -8,7 +8,7 @@ format:
 ```{r setup}
 #| include: false
 source("R/cv_functions.R")
-cv <- create_cv("data")
+cv <- create_cv()
 ```
 
 ::: {.section-intro}

@@ -22,7 +22,7 @@ knitr:
 #| fig.keep: "none"
 knitr::opts_chunk$set(fig.keep = "none")
 source("R/cv_functions.R")
-cv <- create_cv("data")
+cv <- create_cv()
 ```
 
 ```{r intro, results='asis'}
@@ -111,10 +111,4 @@ print_section(cv, "awards")
 
 ```{r roles, results='asis'}
 print_section(cv, "professional_roles")
-```
-
-# References {data-icon="address-book"}
-
-```{r references, results='asis'}
-print_section(cv, "references")
 ```
