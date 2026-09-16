@@ -38,4 +38,8 @@ At ETH Zurich's [Global Health Engineering](https://ghe.ethz.ch) group I founded
 
 I also teach data science with R and Quarto, from graduate courses at ETH Zurich and CU Boulder to free online cohorts (ds4owd) reaching hundreds of participants worldwide, and I build the R tooling ([washr](https://openwashdata.github.io/washr/), [fairenough](https://openwashdata.github.io/fairenough/), [jmpwashdata](https://github.com/larnsce/jmpwashdata)) that makes open data easier to publish. My background is in environmental and hygiene engineering, with field research on city-wide sanitation and faecal sludge management across Uganda, Tanzania, Vietnam, Bangladesh, India, Bhutan, Haiti and South Africa.
 
+```{r upcoming, results='asis'}
+print_upcoming(cv)
+```
+
 Use the navigation above to explore my [research](research.qmd), [software and open data](software.qmd), [teaching](teaching.qmd), and [media](media.qmd), or read the full [CV](cv.qmd).
