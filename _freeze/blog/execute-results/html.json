@@ -3,9 +3,7 @@
   "result": {
     "engine": "knitr",
     "markdown": "---\ntitle: \"Blog\"\nformat:\n  html:\n    toc: false\n---\n\n\n\n::: {.section-intro}\nOccasional writing on data stewardship, open science and reproducible research, mostly on the Global Health Engineering blog.\n:::\n\n\n- **2026-07**  [Who wrote this? Scientific integrity at ETH Zurich in the age of AI](https://ghe.ethz.ch/ghe-blog-news/2026/07/blog-who-wrote-this-scientific-integrity-at-eth-zurich-in-the-age-of-ai.html). GHE Blog\n- **2024-03**  [Plan for tomorrow today: why you need a data steward](https://ghe-open.ch/blog/posts/2024-03-08-swissrn-abstract/). GHE Blog (with E. Tilley)\n- **2024-02**  [Motivation for Team Award](https://ghe-open.ch/blog/posts/2024-02-27-swissrn-award/). GHE Blog\n- **2024-02**  [Attention, Prof: You need a data steward for your team](https://ghe.ethz.ch/ghe-blog-news/2024/02/blog-attention-prof-you-need-a-data-steward-for-your-team.html). GHE Blog\n",
-    "supporting": [
-      "blog_files"
-    ],
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
