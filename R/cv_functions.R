@@ -270,3 +270,62 @@ print_media <- function(cv, kind = NULL) {
   cat("</ul>\n\n")
   invisible()
 }
+
+#' Print the upcoming talks and workshops as a callout box (call with
+#' results='asis'). Keeps the rows of the talks and workshops sections whose
+#' last month (end, or start when end is blank) is the current month or later;
+#' start and end carry month precision (YYYY-MM). Nearest event first, so the
+#' next date sits on top. Emits nothing when no row is upcoming, which hides
+#' the box.
+#'
+#' @param cv the list from create_cv().
+#' @param sections the entries sections that count as events.
+#' @param today the reference date (a Date); default Sys.Date().
+#' @param title the callout title.
+print_upcoming <- function(cv, sections = c("talks", "workshops"),
+                           today = Sys.Date(),
+                           title = "Upcoming talks and workshops") {
+  d <- dplyr::filter(cv$entries, section %in% sections)
+  if (nrow(d) == 0) return(invisible())
+
+  month_key <- function(x) {
+    x <- as.character(x)
+    ifelse(is.na(x) | x == "", NA_character_, substr(x, 1, 7))
+  }
+  d$.from <- month_key(d$start)
+  d$.to   <- dplyr::coalesce(month_key(d$end), d$.from)
+  this_month <- format(today, "%Y-%m")
+  d <- d[!is.na(d$.to) & d$.to >= this_month, ]
+  if (nrow(d) == 0) return(invisible())
+  d <- d[order(d$.from, d$.to), ]
+
+  month_label <- function(ym) {
+    ok <- !is.na(ym) & grepl("^\\d{4}-\\d{2}$", ym)
+    out <- ym
+    out[ok] <- format(as.Date(paste0(ym[ok], "-01")), "%B %Y")
+    out
+  }
+  kind <- c(talks = "Talk", workshops = "Workshop")
+
+  lines <- character(nrow(d))
+  for (i in seq_len(nrow(d))) {
+    r <- d[i, ]
+    when <- if (identical(r$.from, r$.to)) month_label(r$.from)
+            else paste(month_label(r$.from), "to", month_label(r$.to))
+    label <- if (r$section %in% names(kind)) kind[[r$section]] else "Event"
+    ttl <- if (!is.na(r$url) && r$url != "") glue("[{r$title}]({r$url})") else r$title
+    bits <- c()
+    if (!is.na(r$institution) && r$institution != "") bits <- c(bits, r$institution)
+    if (!is.na(r$loc) && r$loc != "") bits <- c(bits, r$loc)
+    meta <- if (length(bits)) paste0(" ", paste(bits, collapse = ", ")) else ""
+    lines[i] <- glue(
+      "**{when}** <span class=\"pub-tag tag-wip\">{label}</span> {ttl}.{meta}"
+    )
+  }
+
+  cat("\n::: {.callout-note .upcoming-box title=\"", title,
+      "\" appearance=\"simple\" icon=false}\n\n", sep = "")
+  cat(paste0("- ", lines, collapse = "\n"))
+  cat("\n\n:::\n\n")
+  invisible()
+}
