@@ -271,20 +271,21 @@ print_media <- function(cv, kind = NULL) {
   invisible()
 }
 
-#' Print the upcoming talks and workshops as a callout box (call with
-#' results='asis'). Keeps the rows of the talks and workshops sections whose
-#' last month (end, or start when end is blank) is the current month or later;
-#' start and end carry month precision (YYYY-MM). Nearest event first, so the
-#' next date sits on top. Emits nothing when no row is upcoming, which hides
-#' the box.
+#' Print the upcoming talks, workshops and courses as a callout box (call with
+#' results='asis'). Keeps the rows of the talks, workshops and teaching
+#' sections whose last month (end, or start when end is blank) is the current
+#' month or later. Only rows with month precision (YYYY-MM) count as dated
+#' events; the teaching rows that span years (2024 to 2026) are roles and stay
+#' out. Nearest event first, so the next date sits on top. Emits nothing when
+#' no row is upcoming, which hides the box.
 #'
 #' @param cv the list from create_cv().
 #' @param sections the entries sections that count as events.
 #' @param today the reference date (a Date); default Sys.Date().
 #' @param title the callout title.
-print_upcoming <- function(cv, sections = c("talks", "workshops"),
+print_upcoming <- function(cv, sections = c("talks", "workshops", "teaching"),
                            today = Sys.Date(),
-                           title = "Upcoming talks and workshops") {
+                           title = "Upcoming talks, workshops and courses") {
   d <- dplyr::filter(cv$entries, section %in% sections)
   if (nrow(d) == 0) return(invisible())
 
@@ -295,7 +296,7 @@ print_upcoming <- function(cv, sections = c("talks", "workshops"),
   d$.from <- month_key(d$start)
   d$.to   <- dplyr::coalesce(month_key(d$end), d$.from)
   this_month <- format(today, "%Y-%m")
-  d <- d[!is.na(d$.to) & d$.to >= this_month, ]
+  d <- d[!is.na(d$.to) & grepl("^\\d{4}-\\d{2}$", d$.to) & d$.to >= this_month, ]
   if (nrow(d) == 0) return(invisible())
   d <- d[order(d$.from, d$.to), ]
 
@@ -305,7 +306,7 @@ print_upcoming <- function(cv, sections = c("talks", "workshops"),
     out[ok] <- format(as.Date(paste0(ym[ok], "-01")), "%B %Y")
     out
   }
-  kind <- c(talks = "Talk", workshops = "Workshop")
+  kind <- c(talks = "Talk", workshops = "Workshop", teaching = "Course")
 
   lines <- character(nrow(d))
   for (i in seq_len(nrow(d))) {
