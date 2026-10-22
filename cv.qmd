@@ -37,7 +37,7 @@ print_pub_list(cv, "publications", type = "article", numbered = TRUE, limit = 5)
 ## Selected Grants & Awards
 
 ```{r grants, results='asis'}
-print_section(cv, "grants", limit = 3)
+print_section(cv, "grants", limit = 3, status = "funded")
 ```
 
 ```{r awards, results='asis'}
