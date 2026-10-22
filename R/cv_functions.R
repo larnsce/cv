@@ -12,6 +12,9 @@ suppressPackageStartupMessages({
 #' Load all CV data from the aboutme data package into a list.
 create_cv <- function() {
   entries <- aboutme::entries
+  # Older aboutme versions have no `status` column; add it empty so the grant
+  # filters below treat every grant as funded.
+  if (!"status" %in% names(entries)) entries$status <- NA_character_
 
   # Collapse description_1..N into a single bulleted block.
   desc_cols <- grep("^description", names(entries), value = TRUE)
@@ -59,16 +62,51 @@ timeline <- function(start, end) {
   )
 }
 
+#' Grant status of each row: the `status` value, with a missing or blank status
+#' read as "funded" (older aboutme versions, and grants entered before the
+#' column existed).
+grant_status <- function(status) {
+  s <- tolower(trimws(as.character(status)))
+  ifelse(is.na(s) | s == "", "funded", s)
+}
+
+#' Label shown in place of the timeline for a grant proposal that was not
+#' funded (yet): "Submitted 2026", "Not funded 2025".
+proposal_label <- function(status, start) {
+  lbl <- dplyr::case_when(
+    status == "submitted"    ~ "Submitted",
+    status == "unsuccessful" ~ "Not funded",
+    TRUE                     ~ stringr::str_to_sentence(status)
+  )
+  yr <- ifelse(is.na(start) | start == "", "", paste0(" ", start))
+  paste0(lbl, yr)
+}
+
 #' Print one section of entries as markdown (call with results='asis').
 #' @param style "block" = full entry with bullets (work, education, open data);
 #'   "compact" = one dense line per entry (talks, teaching, workshops).
 #' @param limit optional integer: keep only the first `limit` entries after
 #'   sorting (used for "top N" summaries on the website CV page).
-print_section <- function(cv, section_id, style = "block", limit = NULL) {
+#' @param status optional character vector of grant statuses to keep
+#'   ("funded", "submitted", "unsuccessful"); a missing status counts as
+#'   "funded". NULL keeps all rows. Rows that are not funded show their status
+#'   ("Submitted 2026", "Not funded 2025") in place of the timeline, so a
+#'   proposal never reads as "Current".
+print_section <- function(cv, section_id, style = "block", limit = NULL,
+                          status = NULL) {
   d <- dplyr::filter(cv$entries, section == section_id)
+  if (!is.null(status)) {
+    keep <- tolower(status)
+    d <- d[grant_status(d$status) %in% keep, ]
+  }
   if (nrow(d) == 0) return(invisible())
   if (!is.null(limit) && nrow(d) > limit) d <- utils::head(d, limit)
   d$tl <- timeline(d$start, d$end)
+  if (!is.null(status)) {
+    st <- grant_status(d$status)
+    pending <- st != "funded"
+    d$tl[pending] <- proposal_label(st[pending], d$start[pending])
+  }
 
   if (style == "compact") {
     lines <- character(nrow(d))

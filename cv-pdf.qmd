@@ -98,7 +98,13 @@ print_section(cv, "technical_reports")
 # Grants & Funding {data-icon="hand-holding-dollar"}
 
 ```{r grants, results='asis'}
-print_section(cv, "grants")
+print_section(cv, "grants", status = "funded")
+```
+
+# Proposals {data-icon="file-signature"}
+
+```{r proposals, results='asis'}
+print_section(cv, "grants", status = c("submitted", "unsuccessful"))
 ```
 
 # Awards {data-icon="trophy"}

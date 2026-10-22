@@ -33,7 +33,13 @@ print_text_block(cv, "grants_aside")
 :::
 
 ```{r grants, results='asis'}
-print_section(cv, "grants")
+print_section(cv, "grants", status = "funded")
+```
+
+## Proposals
+
+```{r proposals, results='asis'}
+print_section(cv, "grants", status = c("submitted", "unsuccessful"))
 ```
 
 ## Awards
