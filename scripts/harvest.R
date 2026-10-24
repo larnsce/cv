@@ -1,3 +1,9 @@
+# NOTE: superseded. The harvest now lives in the aboutme package as
+# dev/agents/harvest.R (github.com/larnsce/aboutme), with ORCID, Zenodo and
+# GitHub sources, a diff against the curated data and a monthly run that
+# drafts new rows as a pull request. CV data is curated in aboutme, not here.
+# This script is kept for reference only.
+#
 # harvest.R
 # Re-pull CV source data from ORCID and GitHub into staging CSVs under data/staging/.
 # These staging files are for REVIEW. Curated content lives in data/*.csv, which you
