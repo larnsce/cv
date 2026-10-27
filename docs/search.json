@@ -1,5 +1,180 @@
 [
   {
+    "objectID": "datenschutz.html",
+    "href": "datenschutz.html",
+    "title": "Datenschutz",
+    "section": "",
+    "text": "Diese Seite erklärt, was mit deinen Daten passiert, wenn du den Newsletter bitz abonnierst, und was beim Besuch dieser Website gespeichert wird. Ich gebe deine Daten nicht weiter und verkaufe sie nicht."
+  },
+  {
+    "objectID": "datenschutz.html#wer-verantwortlich-ist",
+    "href": "datenschutz.html#wer-verantwortlich-ist",
+    "title": "Datenschutz",
+    "section": "Wer verantwortlich ist",
+    "text": "Wer verantwortlich ist\nLars Schöbitz GmbH (Marke bitz)\nEibenstrasse 9\n8045 Zürich\nlars@lse.de"
+  },
+  {
+    "objectID": "datenschutz.html#der-newsletter-bitz",
+    "href": "datenschutz.html#der-newsletter-bitz",
+    "title": "Datenschutz",
+    "section": "Der Newsletter bitz",
+    "text": "Der Newsletter bitz\nWas gespeichert wird. Wenn du bitz abonnierst, speichert Buttondown in meinem Auftrag deine Mailadresse, deine Antwort auf die Frage “Wo arbeitest du?”, den Zeitpunkt der Anmeldung und den Link, über den du dich angemeldet hast, zum Beispiel aus LinkedIn oder aus einer weitergeleiteten Ausgabe. Bei der Anmeldung speichert Buttondown auch deine IP Adresse, um automatische Anmeldungen zu erkennen.\nWozu. Die Mailadresse brauche ich, um dir den Newsletter zu schicken. Die Frage nach dem Arbeitsort zeigt mir, ob ich die Menschen erreiche, für die ich schreibe: in Behörden, Hochschulen, internationalen Organisationen, der Privatwirtschaft, in NGOs und selbstständig. Ich werte die Antworten nur zusammengefasst aus. Der Anmeldelink zeigt mir, über welchen Weg Leser:innen zu bitz finden.\nWas ich nicht messe. Ich messe nicht, ob du eine Ausgabe öffnest, und nicht, welche Links du anklickst. Die Ausgaben enthalten kein Zählpixel, und die Links führen direkt zum Ziel.\nUmfragen und Antworten. Manche Ausgaben enthalten eine Frage mit Antwortknöpfen. Wenn du antwortest, speichert Buttondown deine Antwort zusammen mit deiner Mailadresse. Wenn du auf eine Ausgabe per Mail antwortest, landet deine Mail in meinem Postfach bei Google Workspace.\nDeine Einwilligung. Du meldest dich selbst an und bestätigst die Anmeldung über einen Link in einer ersten Mail. Das ist deine Einwilligung. Du kannst sie jederzeit widerrufen, über den Abmeldelink am Ende jeder Ausgabe oder mit einer Mail an mich.\nWo die Daten liegen. Buttondown ist ein Anbieter aus den USA (Richmond, Virginia). Die Daten liegen dort. Grundlage für die Übermittlung ist der Vertrag zur Auftragsverarbeitung von Buttondown mit den Standardvertragsklauseln der EU und den Ergänzungen für die Schweiz. Buttondown verschickt die Mails über Postmark; alle Dienstleister stehen in der Liste der Unterauftragsverarbeiter. Die Ausgaben stehen auch im Archiv auf buttondown.com/bitz; für den Besuch dort gilt die Datenschutzerklärung von Buttondown.\nWie lange. Solange du abonniert bist. Nach der Abmeldung bleibt deine Adresse bei Buttondown als abgemeldet gespeichert, damit sie nicht wieder auf die Liste kommt. Wenn du willst, lösche ich sie ganz; schreib mir."
+  },
+  {
+    "objectID": "datenschutz.html#diese-website",
+    "href": "datenschutz.html#diese-website",
+    "title": "Datenschutz",
+    "section": "Diese Website",
+    "text": "Diese Website\nlse.de liegt bei Netlify (USA). Netlify protokolliert Zugriffe technisch (IP Adresse, Zeitpunkt, aufgerufene Seite) und löscht diese Protokolle nach kurzer Zeit. Für die Besucherstatistik nutze ich Plausible, einen Dienst aus der EU, der keine Cookies setzt und einzelne Personen nicht erkennt. Ich sehe nur zusammengefasste Zahlen."
+  },
+  {
+    "objectID": "datenschutz.html#deine-rechte",
+    "href": "datenschutz.html#deine-rechte",
+    "title": "Datenschutz",
+    "section": "Deine Rechte",
+    "text": "Deine Rechte\nDu kannst jederzeit erfahren, welche Daten ich über dich habe, sie berichtigen oder löschen lassen und deine Einwilligung widerrufen. Schreib dazu an lars@lse.de. Du kannst dich auch bei einer Aufsichtsbehörde beschweren: in der Schweiz beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB), in der EU bei der Behörde an deinem Wohnort.\nStand: 27. Oktober 2026"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Occasional writing on data stewardship, open science and reproducible research, mostly on the Global Health Engineering blog.\n\n\n2026-07 Who wrote this? Scientific integrity at ETH Zurich in the age of AI. GHE Blog\n2024-03 Plan for tomorrow today: why you need a data steward. GHE Blog (with E. Tilley)\n2024-02 Motivation for Team Award. GHE Blog\n2024-02 Attention, Prof: You need a data steward for your team. GHE Blog"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching & Talks",
+    "section": "",
+    "text": "I teach reproducible data science with R and Quarto to newcomers, from graduate courses to free online cohorts and hands-on workshops for scientists and civil servants."
+  },
+  {
+    "objectID": "teaching.html#courses",
+    "href": "teaching.html#courses",
+    "title": "Teaching & Talks",
+    "section": "Courses",
+    "text": "Courses\n\n2024 - 2026 rstatsZH - Data Science mit R (redeveloped, k009-k012). Statistical Office of the Canton of Zurich, Zurich, CH\n2022 - 2026 CVEN 5837/5873/5999 - Data Analytics for Development (4 iterations). University of Colorado Boulder, Boulder, USA (online)\n2025-09 - 2025-12 Data Science for openwashdata (ds4owd), Cohort 2. openwashdata / ETH Zurich\n2022 - 2025 Research Beyond the Lab - Open Science and Research Methods (3 iterations). ETH Zurich, Zurich, CH\n2024-04 Quarto - Authoring and Publishing for Collaborative Scientific Writing. ETH Zurich - Global Health Engineering\n2023-10 - 2024-02 Data Science for openwashdata (ds4owd), Cohort 1. openwashdata / ETH Zurich\n2023-10 Open Science Tools for Collaborative Scientific Writing. ETH Zurich - Global Health Engineering, Zurich, CH\n2021 - 2023 rstatsZH - Data Science mit R (k001-k008). Statistical Office of the Canton of Zurich, Zurich, CH\n2017 Lecturer - Faecal Sludge Management. Mittelhessen University of Applied Sciences (THM), Giessen, DE\n2016 Lecturer - Sanitation MOOC. Massive Open Online Course: Planning & Design of Sanitation Systems and Technologies\n2013 - 2016 Lecturer - Faecal Sludge Management. NADEL (ETH Zurich) & EPF Lausanne, Switzerland"
+  },
+  {
+    "objectID": "teaching.html#workshops",
+    "href": "teaching.html#workshops",
+    "title": "Teaching & Talks",
+    "section": "Workshops",
+    "text": "Workshops\n\n2026-06 Quarto for Collaborative Scientific Writing - RDM Summer School. ETH Zurich, Zurich, CH\n2026-07 Git for Scientists. ETH Zurich - Global Health Engineering, Zurich, CH\n2026-11 Git for Scientists: hands-on workshop. Swiss Research Data Conference (RDC 2026) - SRDSN\n2026-09 Agents for Scientists. ETH Zurich - Global Health Engineering, Zurich, CH\n2025-05 Git for Scientists. CIS, ETH Zurich, Zurich, CH\n2024-06 Quarto for Collaborative Scientific Writing - RDM Summer School. ETH Zurich, Zurich, CH\n2024-11 FAIR Data Publishing. UKZN WASH Centre, UKZN, South Africa\n2023-11 Data Stewardship - SST Educational Workshop. Swiss Toxicology Society (SST), Basel\n2023-10 Reference Management with Zotero. Hubris to Hope (HS23)\n2023-06 open by default - a data management strategy. ETH Research Data Management Summer School, Zurich, CH\n2023-02 Data Stewardship Network Kick-off. ETH Zurich, Zurich, CH\n2021 Data Science for WASH - An opportunity for the sector. Colorado WASH Symposium, online"
+  },
+  {
+    "objectID": "teaching.html#talks-invited-presentations",
+    "href": "teaching.html#talks-invited-presentations",
+    "title": "Teaching & Talks",
+    "section": "Talks & Invited Presentations",
+    "text": "Talks & Invited Presentations\n\n\nFeatured recording: Plan for tomorrow today - a model for data stewardship (ETH Library 17:15 Kolloquium).\n\n2026-05 Hello, I am a Data Steward - ReproducibiliTea Journal Club. University of Zurich\n2026-06 FAIRqual - FAIR data practices for qualitative research. Highlighting Outcomes and Advancing Best Practices in ORD - ETH Domain ORD Programme, Bern, CH\n2026-11 Embedded data stewardship and research intelligence: five years of practice at a research group at ETH Zurich. Swiss Research Data Conference (RDC 2026) - SRDSN\n2026-09 Git for Scientists - so that we can still prove what is human. Data Stewardship Network (DSN) Autumn Community Meeting, ETH Zurich, Zurich, CH\n2025-09 Publishing Open Metadata for ORD Projects of the ETH Domain. Swiss Open Academic Data (SOAD) Day\n2025-06 Hello, I am a Data Steward - Career Talk. Research Software Engineering and Data Stewardship Career Panel\n2025-05 Computational Reproducibility Seminar. Swiss Reproducibility Network (SwissRN)\n2025-05 Plan for tomorrow today - D-USYS Transdisciplinary Lab Brown Bag. ETH Zurich D-USYS TdLab\n2025-05 Open Research Data Program of the ETH Board - open metadata dataset. ETH ORD Programme\n2024-11 Plan for tomorrow today - a model for data stewardship. ETH Library 17:15 Kolloquium\n2024-10 Swiss Research Data Day (SRDD). SRDD\n2024-09 Data Stewardship at Global Health Engineering. ETH Zurich\n2024-06 Plan for tomorrow today - why you need a data steward. Swiss Reproducibility Conference (SwissRN)\n2021-03 Berufsbild EZ Seminar. Albert-Ludwigs-University of Freiburg, Freiburg, DE\n2021 Die datengetriebene Verwaltung: Daten- und Statistikkompetenz für den Kanton Zürich. Conference on Digital Sustainability (DINAcon)\n2020 DINAcon 2020. Conference on Digital Sustainability (DINAcon), online\n2020 UN World Data Forum 2020. United Nations World Data Forum, online\n2019 5th Faecal Sludge Management Conference. FSM5, Cape Town, ZA\n2016 UNC Water and Health Conference. UNC, Chapel Hill, USA\n2016 Sandec Research Seminar. Eawag / Sandec, Duebendorf, CH\n2015 UNC Water and Health Conference. UNC, Chapel Hill, USA\n2015 Stockholm World Water Week. SIWI, Stockholm, SE\n2015 4th AfricaSan Conference. AfricaSan, Dakar, SN\n2015 3rd Faecal Sludge Management Conference. FSM3, Hanoi, VN\n2014 37th WEDC International Conference. WEDC, Hanoi, VN\n2014 Stockholm World Water Week. SIWI, Stockholm, SE\n2013 36th WEDC International Conference. WEDC, Nakuru, KE\n2012 2nd Faecal Sludge Management Conference. FSM2, Durban, ZA\n2012 Water Institute of Southern Africa (WISA) Conference. WISA, Cape Town, ZA"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research sits at the intersection of environmental engineering, global sanitation, and data science. I work on methods to quantify and characterise faecal sludge, city-wide sanitation monitoring, and the tools and open data that make this work reproducible."
+  },
+  {
+    "objectID": "research.html#research-interests",
+    "href": "research.html#research-interests",
+    "title": "Research",
+    "section": "Research Interests",
+    "text": "Research Interests\nFaecal sludge management · City-wide sanitation monitoring (SFD / Shit Flow Diagrams) · Quantification and characterisation of faecal sludge · Open research data and FAIR data publishing · Reproducible data science with R and Quarto · Data stewardship"
+  },
+  {
+    "objectID": "research.html#peer-reviewed-articles",
+    "href": "research.html#peer-reviewed-articles",
+    "title": "Research",
+    "section": "Peer-Reviewed Articles",
+    "text": "Peer-Reviewed Articles\n\n\n6. Light absorbing carbonaceous aerosols: Concentrations and sources in an under-monitored region (2025) Ecotoxicology and Environmental Safety. DOI\n\n\n5. Estimating Safely Managed Sanitation in Urban Areas; Lessons Learned From a Global Implementation of Excreta-Flow Diagrams (2020) Frontiers in Environmental Science. DOI\n\n\n4. Towards an off-grid fecal sludge treatment unit: demonstrating energy positive thermal treatment (2019) Gates Open Research. DOI\n\n\n3. Methods to reliably estimate faecal sludge quantities and qualities for the design of treatment technologies and management solutions (2018) Journal of Environmental Management. DOI\n\n\n2. GIS Analysis and Optimisation of Faecal Sludge Logistics at City-Wide Scale in Kampala, Uganda (2017) Sustainability. DOI\n\n\n1. FAQ: Faecal sludge quantification and characterization - field trial of methodology in Kampala, Uganda (2014) Sandec News."
+  },
+  {
+    "objectID": "research.html#conference-papers",
+    "href": "research.html#conference-papers",
+    "title": "Research",
+    "section": "Conference Papers",
+    "text": "Conference Papers\n\n\nRemote Sensing, Mobile Applications and Open Data Science Tools for Better Monitoring of Sanitation Systems (2018) HIC 2018, 13th International Conference on Hydroinformatics. DOI\n\n\nMarket driven approach for faecal sludge treatment products (2017) 40th WEDC International Conference. DOI\n\n\nFAQ: Faecal Sludge Quantification and Characterization - field trial of methodology in Hanoi, Vietnam (2014) 37th WEDC International Conference."
+  },
+  {
+    "objectID": "research.html#technical-reports",
+    "href": "research.html#technical-reports",
+    "title": "Research",
+    "section": "Technical Reports",
+    "text": "Technical Reports\n\n\nSFD Promotion Initiative - Final Reports (7 cities) (2015) Sustainable Sanitation Alliance / Eawag-Sandec.\n\n\nRRR-Project: From Research to Implementation, Component 1 - Waste Supply and Availability (2014) Eawag-Sandec."
+  },
+  {
+    "objectID": "research.html#field-research",
+    "href": "research.html#field-research",
+    "title": "Research",
+    "section": "Field Research",
+    "text": "Field Research\nUganda (Kampala) · Tanzania (Dar es Salaam) · Vietnam (Hanoi) · Bangladesh (Khulna) · India · Bhutan · Haiti (Cap-Haïtien) · South Africa (Durban)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lars Schöbitz",
+    "section": "",
+    "text": "Environmental engineer and data scientist working in the global water, sanitation and hygiene (WASH) sector. Open Science Specialist at ETH Zurich, where I help researchers make their work reproducible and their data open. I founded and lead openwashdata, teach data science with R, and write and manage the grants that fund this work.\nAt ETH Zurich’s Global Health Engineering group I founded and lead openwashdata, a global community that publishes WASH-sector data as documented, FAIR R packages. I wrote and manage a portfolio of ETH Board Open Research Data grants behind this work, and in 2024 openwashdata received the National Prize for Open Research Data. I am a data steward in ETH’s Data Stewardship Network and the local node leader for the Swiss Reproducibility Network at ETH.\nI also teach data science with R and Quarto, from graduate courses at ETH Zurich and CU Boulder to free online cohorts (ds4owd) reaching hundreds of participants worldwide, and I build the R tooling (washr, fairenough, jmpwashdata) that makes open data easier to publish. My background is in environmental and hygiene engineering, with field research on city-wide sanitation and faecal sludge management across Uganda, Tanzania, Vietnam, Bangladesh, India, Bhutan, Haiti and South Africa.\n\n\n\n\n\n\nNoteUpcoming talks, workshops and courses\n\n\n\n\nNovember 2026 Talk Embedded data stewardship and research intelligence: five years of practice at a research group at ETH Zurich. Swiss Research Data Conference (RDC 2026) - SRDSN\nNovember 2026 Workshop Git for Scientists: hands-on workshop. Swiss Research Data Conference (RDC 2026) - SRDSN\n\n\n\nUse the navigation above to explore my research, software and open data, teaching, and media, or read the full CV."
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software & Data",
+    "section": "",
+    "text": "I build and lead open-data communities and FAIR data tooling for the water, sanitation and hygiene (WASH) sector, and I write and manage the grants that fund them."
+  },
+  {
+    "objectID": "software.html#open-data-software",
+    "href": "software.html#open-data-software",
+    "title": "Software & Data",
+    "section": "Open Data & Software",
+    "text": "Open Data & Software\n\nAGUASAN Workshop 2027 - Publishing WASH Data Together\nAGUASAN Community of Practice / SDC Water Network\n2026 - Current\n\nAuthor of a topic proposal for a five-day working retreat where WASH-sector participants publish datasets while learning Git/GitHub, Quarto and safe use of AI agents; bridges academia (ETH), the WASH community and Swiss government.\n\n\n\ndataitd24 - data from the FAIRqual workshop at ITD24\nMaintainer\n2026 - Current\n\nR data package with the data of the FAIRqual workshop at the ITD24 conference (Utrecht, November 2024): digitised flipcharts, a qualitative codebook with 50 codes and the workshop documentation; v1.0.0 released in February 2026.\nIncludes an article comparing the GitHub to Zenodo and the SWISSUbase publishing workflows.\nDOI: https://doi.org/10.5281/zenodo.18493525\n\n\n\nQualitative Data Governance for Transdisciplinary and Participatory Research - e-learning module\nCo-author\n2026 - Current\n\nOpen e-learning module on the ETH Domain Data Management Campus (ETH Board ORD Program, Measure 3 Open Educational Resources), published in September 2026. Contributed to the unit on levels of access and data repositories (Unit 4.3.2).\nMohr, F., Marqués, L., Reifenrath, J., Schöbitz, L., Simon, L., & Chapman, M.\nDOI: https://doi.org/10.5281/zenodo.23016356\n\n\n\nfairenough - tidy data into documented R packages\nAuthor\n2025 - Current\n\nConverts tidy data into R packages with documentation websites and AI-assisted descriptions.\n\n\n\njmpwashdata - WHO/UNICEF JMP data\nAuthor\n2024 - Current\n\nR package providing tidy access to WHO/UNICEF Joint Monitoring Programme WASH data.\n\n\n\nData Science for openwashdata (ds4owd)\nCourse Creator & Instructor\n2023 - Current\n\nDesigned and taught two free online cohorts on literate programming with Quarto and R; hundreds of participants across many countries.\nFocus on data management, reproducibility and publishing open data.\n\n\n\nwashr - R package for publishing openwashdata resources\nAuthor\n2023 - Current\n\nAn R package that makes publishing openwashdata data resources easier.\n\n\n\nopenwashdata community\nFounder & Community Lead\n2022 - Current\n\nBuilt and lead a global open-data community for the WASH sector; 90+ open datasets published as documented R data packages.\nCreated the {washr} and {fairenough} R packages that turn tidy data into FAIR, documented data packages.\nSee openwashdata.org\n\n\n\nrstatsZH - open course materials & infrastructure\nCreator & Maintainer\n2021 - Current\n\nBuilt and maintain the open, reusable course materials, website templates and Git-based infrastructure behind the rstatsZH training programme (course delivery is under Teaching)."
+  },
+  {
+    "objectID": "software.html#grants-funding",
+    "href": "software.html#grants-funding",
+    "title": "Software & Data",
+    "section": "Grants & Funding",
+    "text": "Grants & Funding\n\n\nWrote and managed a portfolio of ETH Board Open Research Data grants worth roughly CHF 500,000 in total (2023-2026).\n\nopenwashdata - establishing Data Stewards and increasing FAIRness\nETH Board ORD Program (Explore, 2nd call)\n2024 - 2026\n\nWrote the proposal and managed the project (Prof. Elizabeth Tilley, PI). Placed funded data stewards in partner organisations (UKZN, South Africa; BASEflow, Malawi) and delivered a 12-module data stewardship training programme.\n\n\n\nFAIRqual - FAIR Data Practices for Qualitative Research in Transdisciplinarity\nETH Board ORD Program (Explore, Measure 1)\n2024 - 2026\n\nCo-wrote the proposal and contributed to the project (team across TdLab and Global Health Engineering, ETH Zurich). Developed tools and standards for sharing hard-to-anonymise qualitative research data following FAIR principles.\n\n\n\nwashcollab - Enhancing Global WASH Data Accessibility through Collaborative Initiatives\nETH Board ORD Program (Contribute)\n2024 - 2025\n\nWrote the proposal and managed the project (Prof. Elizabeth Tilley, PI). A partnership between WASHWeb and openwashdata that maintained open-source tools for authoritative WASH data (WHO/UNICEF JMP, World Bank, UN-Water GLAAS, OECD).\n\n\n\nopenwashdata - Open WASH data by building Open Science Competencies and Community\nETH Board ORD Program (Explore, 1st call)\n2023 - 2024\n\nWrote the proposal and managed the project (Prof. Elizabeth Tilley, PI). Built the infrastructure, community and FAIR data publishing workflow for open WASH data; 18 months.\n\n\n\nopenjmp - Open JMP: unlocking the potential of global indicator data\nETH Board ORD Program (Contribute)\n2023 - 2024\n\nWrote the proposal and managed the project (Prof. Elizabeth Tilley, PI). In partnership with the WHO/UNICEF Joint Monitoring Programme, turns decades of WASH coverage data into documented open R packages; 15 months."
+  },
+  {
+    "objectID": "software.html#proposals",
+    "href": "software.html#proposals",
+    "title": "Software & Data",
+    "section": "Proposals",
+    "text": "Proposals\n\nSDSC openwashdata - Reviewed, open data publishing for the WASH sector, end to end at pilot scale\nSwiss Data Science Center (SDSC), National Call 2026 (Collaboration and Expertise Request)\nSubmitted 2026\n\nWrote the proposal as PI (Prof. Elizabeth Tilley, co-PI). Requests six months of SDSC engineering time, as a Proof of Concept, to turn the openwashdata publishing pipeline into a service on secure ETH infrastructure that takes submitted files to a reviewed, citable data package.\n\n\n\nFAIR by doing - A hands-on programme that trains ETH researchers to make their own research data FAIR and to declare their use of AI tools\nETH FAIR Competence Funding (2nd call)\nSubmitted 2026\n\nWrote the proposal as corresponding applicant, with Adriana Clavijo Daza. A twelve-month programme from 1 February 2027 in which fifteen ETH researchers, mostly postdoctoral researchers and doctoral students, take a dataset of their own to a published, citable data package and declare their use of AI tools.\n\n\n\nSwiss-Ghana partnership - Building Computational Research Competencies: A Swiss-Ghana Partnership for Open Science Capacity Development\nSwiss Leading House Africa, Research Partnership Grant 2025-2028 (SERI, Swiss TPH with the University of Basel)\nNot funded 2025\n\nWrote the proposal (Prof. Elizabeth Tilley, Swiss PI; Dr. Eugene Appiah-Effah, KNUST, Ghana). A ten-month programme with a one-week bootcamp at ETH Zurich for eight KNUST researchers from the ds4owd course, followed by remote mentorship in Open Science workflows."
+  },
+  {
+    "objectID": "software.html#awards",
+    "href": "software.html#awards",
+    "title": "Software & Data",
+    "section": "Awards",
+    "text": "Awards\n\nNational Prize for Open Research Data 2024\nSwiss Academies of Arts and Sciences\n2024\n\nAwarded to openwashdata, the global open-data community for the WASH sector (project led by Prof. Elizabeth Tilley, Global Health Engineering, ETH Zurich).\nRecognition for advancing FAIR and Open Research Data practices in the water, sanitation and hygiene sector.\nWatch the prize video: youtu.be/590qPtQNCD0"
+  },
+  {
+    "objectID": "media.html",
+    "href": "media.html",
+    "title": "Media",
+    "section": "",
+    "text": "Selected coverage, recordings and video features of my work on open research data and sanitation."
+  },
+  {
+    "objectID": "media.html#press",
+    "href": "media.html#press",
+    "title": "Media",
+    "section": "Press",
+    "text": "Press\n\n\nETH Zurich (D-MAVT News)2024-12National Prize for Open Research Data 2024 awarded to openwashdata"
+  },
+  {
+    "objectID": "media.html#video-recordings",
+    "href": "media.html#video-recordings",
+    "title": "Media",
+    "section": "Video & Recordings",
+    "text": "Video & Recordings\n\n\nETH Library 17:15 Kolloquium2024-11Plan for tomorrow today - a model for data stewardship\n\n\nSwiss Academies of Arts and Sciences2024National Prize for Open Research Data 2024 - openwashdata prize video"
+  },
+  {
     "objectID": "cv.html",
     "href": "cv.html",
     "title": "Curriculum Vitae",
@@ -54,145 +229,5 @@
     "title": "Curriculum Vitae",
     "section": "Languages",
     "text": "Languages\n\nGerman (native)\n\n\nEnglish (fluent)\n\n\nSwedish\n\n\nFrench"
-  },
-  {
-    "objectID": "media.html",
-    "href": "media.html",
-    "title": "Media",
-    "section": "",
-    "text": "Selected coverage, recordings and video features of my work on open research data and sanitation."
-  },
-  {
-    "objectID": "media.html#press",
-    "href": "media.html#press",
-    "title": "Media",
-    "section": "Press",
-    "text": "Press\n\n\nETH Zurich (D-MAVT News)2024-12National Prize for Open Research Data 2024 awarded to openwashdata"
-  },
-  {
-    "objectID": "media.html#video-recordings",
-    "href": "media.html#video-recordings",
-    "title": "Media",
-    "section": "Video & Recordings",
-    "text": "Video & Recordings\n\n\nETH Library 17:15 Kolloquium2024-11Plan for tomorrow today - a model for data stewardship\n\n\nSwiss Academies of Arts and Sciences2024National Prize for Open Research Data 2024 - openwashdata prize video"
-  },
-  {
-    "objectID": "software.html",
-    "href": "software.html",
-    "title": "Software & Data",
-    "section": "",
-    "text": "I build and lead open-data communities and FAIR data tooling for the water, sanitation and hygiene (WASH) sector, and I write and manage the grants that fund them."
-  },
-  {
-    "objectID": "software.html#open-data-software",
-    "href": "software.html#open-data-software",
-    "title": "Software & Data",
-    "section": "Open Data & Software",
-    "text": "Open Data & Software\n\nAGUASAN Workshop 2027 - Publishing WASH Data Together\nAGUASAN Community of Practice / SDC Water Network\n2026 - Current\n\nAuthor of a topic proposal for a five-day working retreat where WASH-sector participants publish datasets while learning Git/GitHub, Quarto and safe use of AI agents; bridges academia (ETH), the WASH community and Swiss government.\n\n\n\ndataitd24 - data from the FAIRqual workshop at ITD24\nMaintainer\n2026 - Current\n\nR data package with the data of the FAIRqual workshop at the ITD24 conference (Utrecht, November 2024): digitised flipcharts, a qualitative codebook with 50 codes and the workshop documentation; v1.0.0 released in February 2026.\nIncludes an article comparing the GitHub to Zenodo and the SWISSUbase publishing workflows.\nDOI: https://doi.org/10.5281/zenodo.18493525\n\n\n\nQualitative Data Governance for Transdisciplinary and Participatory Research - e-learning module\nCo-author\n2026 - Current\n\nOpen e-learning module on the ETH Domain Data Management Campus (ETH Board ORD Program, Measure 3 Open Educational Resources), published in September 2026. Contributed to the unit on levels of access and data repositories (Unit 4.3.2).\nMohr, F., Marqués, L., Reifenrath, J., Schöbitz, L., Simon, L., & Chapman, M.\nDOI: https://doi.org/10.5281/zenodo.23016356\n\n\n\nfairenough - tidy data into documented R packages\nAuthor\n2025 - Current\n\nConverts tidy data into R packages with documentation websites and AI-assisted descriptions.\n\n\n\njmpwashdata - WHO/UNICEF JMP data\nAuthor\n2024 - Current\n\nR package providing tidy access to WHO/UNICEF Joint Monitoring Programme WASH data.\n\n\n\nData Science for openwashdata (ds4owd)\nCourse Creator & Instructor\n2023 - Current\n\nDesigned and taught two free online cohorts on literate programming with Quarto and R; hundreds of participants across many countries.\nFocus on data management, reproducibility and publishing open data.\n\n\n\nwashr - R package for publishing openwashdata resources\nAuthor\n2023 - Current\n\nAn R package that makes publishing openwashdata data resources easier.\n\n\n\nopenwashdata community\nFounder & Community Lead\n2022 - Current\n\nBuilt and lead a global open-data community for the WASH sector; 90+ open datasets published as documented R data packages.\nCreated the {washr} and {fairenough} R packages that turn tidy data into FAIR, documented data packages.\nSee openwashdata.org\n\n\n\nrstatsZH - open course materials & infrastructure\nCreator & Maintainer\n2021 - Current\n\nBuilt and maintain the open, reusable course materials, website templates and Git-based infrastructure behind the rstatsZH training programme (course delivery is under Teaching)."
-  },
-  {
-    "objectID": "software.html#grants-funding",
-    "href": "software.html#grants-funding",
-    "title": "Software & Data",
-    "section": "Grants & Funding",
-    "text": "Grants & Funding\n\n\nWrote and managed a portfolio of ETH Board Open Research Data grants worth roughly CHF 500,000 in total (2023-2026).\n\nopenwashdata - establishing Data Stewards and increasing FAIRness\nETH Board ORD Program (Explore, 2nd call)\n2024 - 2026\n\nWrote the proposal and managed the project (Prof. Elizabeth Tilley, PI). Placed funded data stewards in partner organisations (UKZN, South Africa; BASEflow, Malawi) and delivered a 12-module data stewardship training programme.\n\n\n\nFAIRqual - FAIR Data Practices for Qualitative Research in Transdisciplinarity\nETH Board ORD Program (Explore, Measure 1)\n2024 - 2026\n\nCo-wrote the proposal and contributed to the project (team across TdLab and Global Health Engineering, ETH Zurich). Developed tools and standards for sharing hard-to-anonymise qualitative research data following FAIR principles.\n\n\n\nwashcollab - Enhancing Global WASH Data Accessibility through Collaborative Initiatives\nETH Board ORD Program (Contribute)\n2024 - 2025\n\nWrote the proposal and managed the project (Prof. Elizabeth Tilley, PI). A partnership between WASHWeb and openwashdata that maintained open-source tools for authoritative WASH data (WHO/UNICEF JMP, World Bank, UN-Water GLAAS, OECD).\n\n\n\nopenwashdata - Open WASH data by building Open Science Competencies and Community\nETH Board ORD Program (Explore, 1st call)\n2023 - 2024\n\nWrote the proposal and managed the project (Prof. Elizabeth Tilley, PI). Built the infrastructure, community and FAIR data publishing workflow for open WASH data; 18 months.\n\n\n\nopenjmp - Open JMP: unlocking the potential of global indicator data\nETH Board ORD Program (Contribute)\n2023 - 2024\n\nWrote the proposal and managed the project (Prof. Elizabeth Tilley, PI). In partnership with the WHO/UNICEF Joint Monitoring Programme, turns decades of WASH coverage data into documented open R packages; 15 months."
-  },
-  {
-    "objectID": "software.html#proposals",
-    "href": "software.html#proposals",
-    "title": "Software & Data",
-    "section": "Proposals",
-    "text": "Proposals\n\nSDSC openwashdata - Reviewed, open data publishing for the WASH sector, end to end at pilot scale\nSwiss Data Science Center (SDSC), National Call 2026 (Collaboration and Expertise Request)\nSubmitted 2026\n\nWrote the proposal as PI (Prof. Elizabeth Tilley, co-PI). Requests six months of SDSC engineering time, as a Proof of Concept, to turn the openwashdata publishing pipeline into a service on secure ETH infrastructure that takes submitted files to a reviewed, citable data package.\n\n\n\nFAIR by doing - A hands-on programme that trains ETH researchers to make their own research data FAIR and to declare their use of AI tools\nETH FAIR Competence Funding (2nd call)\nSubmitted 2026\n\nWrote the proposal as corresponding applicant, with Adriana Clavijo Daza. A twelve-month programme from 1 February 2027 in which fifteen ETH researchers, mostly postdoctoral researchers and doctoral students, take a dataset of their own to a published, citable data package and declare their use of AI tools.\n\n\n\nSwiss-Ghana partnership - Building Computational Research Competencies: A Swiss-Ghana Partnership for Open Science Capacity Development\nSwiss Leading House Africa, Research Partnership Grant 2025-2028 (SERI, Swiss TPH with the University of Basel)\nNot funded 2025\n\nWrote the proposal (Prof. Elizabeth Tilley, Swiss PI; Dr. Eugene Appiah-Effah, KNUST, Ghana). A ten-month programme with a one-week bootcamp at ETH Zurich for eight KNUST researchers from the ds4owd course, followed by remote mentorship in Open Science workflows."
-  },
-  {
-    "objectID": "software.html#awards",
-    "href": "software.html#awards",
-    "title": "Software & Data",
-    "section": "Awards",
-    "text": "Awards\n\nNational Prize for Open Research Data 2024\nSwiss Academies of Arts and Sciences\n2024\n\nAwarded to openwashdata, the global open-data community for the WASH sector (project led by Prof. Elizabeth Tilley, Global Health Engineering, ETH Zurich).\nRecognition for advancing FAIR and Open Research Data practices in the water, sanitation and hygiene sector.\nWatch the prize video: youtu.be/590qPtQNCD0"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Lars Schöbitz",
-    "section": "",
-    "text": "Environmental engineer and data scientist working in the global water, sanitation and hygiene (WASH) sector. Open Science Specialist at ETH Zurich, where I help researchers make their work reproducible and their data open. I founded and lead openwashdata, teach data science with R, and write and manage the grants that fund this work.\nAt ETH Zurich’s Global Health Engineering group I founded and lead openwashdata, a global community that publishes WASH-sector data as documented, FAIR R packages. I wrote and manage a portfolio of ETH Board Open Research Data grants behind this work, and in 2024 openwashdata received the National Prize for Open Research Data. I am a data steward in ETH’s Data Stewardship Network and the local node leader for the Swiss Reproducibility Network at ETH.\nI also teach data science with R and Quarto, from graduate courses at ETH Zurich and CU Boulder to free online cohorts (ds4owd) reaching hundreds of participants worldwide, and I build the R tooling (washr, fairenough, jmpwashdata) that makes open data easier to publish. My background is in environmental and hygiene engineering, with field research on city-wide sanitation and faecal sludge management across Uganda, Tanzania, Vietnam, Bangladesh, India, Bhutan, Haiti and South Africa.\n\n\n\n\n\n\nNoteUpcoming talks, workshops and courses\n\n\n\n\nNovember 2026 Talk Embedded data stewardship and research intelligence: five years of practice at a research group at ETH Zurich. Swiss Research Data Conference (RDC 2026) - SRDSN\nNovember 2026 Workshop Git for Scientists: hands-on workshop. Swiss Research Data Conference (RDC 2026) - SRDSN\n\n\n\nUse the navigation above to explore my research, software and open data, teaching, and media, or read the full CV."
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
-    "section": "",
-    "text": "My research sits at the intersection of environmental engineering, global sanitation, and data science. I work on methods to quantify and characterise faecal sludge, city-wide sanitation monitoring, and the tools and open data that make this work reproducible."
-  },
-  {
-    "objectID": "research.html#research-interests",
-    "href": "research.html#research-interests",
-    "title": "Research",
-    "section": "Research Interests",
-    "text": "Research Interests\nFaecal sludge management · City-wide sanitation monitoring (SFD / Shit Flow Diagrams) · Quantification and characterisation of faecal sludge · Open research data and FAIR data publishing · Reproducible data science with R and Quarto · Data stewardship"
-  },
-  {
-    "objectID": "research.html#peer-reviewed-articles",
-    "href": "research.html#peer-reviewed-articles",
-    "title": "Research",
-    "section": "Peer-Reviewed Articles",
-    "text": "Peer-Reviewed Articles\n\n\n6. Light absorbing carbonaceous aerosols: Concentrations and sources in an under-monitored region (2025) Ecotoxicology and Environmental Safety. DOI\n\n\n5. Estimating Safely Managed Sanitation in Urban Areas; Lessons Learned From a Global Implementation of Excreta-Flow Diagrams (2020) Frontiers in Environmental Science. DOI\n\n\n4. Towards an off-grid fecal sludge treatment unit: demonstrating energy positive thermal treatment (2019) Gates Open Research. DOI\n\n\n3. Methods to reliably estimate faecal sludge quantities and qualities for the design of treatment technologies and management solutions (2018) Journal of Environmental Management. DOI\n\n\n2. GIS Analysis and Optimisation of Faecal Sludge Logistics at City-Wide Scale in Kampala, Uganda (2017) Sustainability. DOI\n\n\n1. FAQ: Faecal sludge quantification and characterization - field trial of methodology in Kampala, Uganda (2014) Sandec News."
-  },
-  {
-    "objectID": "research.html#conference-papers",
-    "href": "research.html#conference-papers",
-    "title": "Research",
-    "section": "Conference Papers",
-    "text": "Conference Papers\n\n\nRemote Sensing, Mobile Applications and Open Data Science Tools for Better Monitoring of Sanitation Systems (2018) HIC 2018, 13th International Conference on Hydroinformatics. DOI\n\n\nMarket driven approach for faecal sludge treatment products (2017) 40th WEDC International Conference. DOI\n\n\nFAQ: Faecal Sludge Quantification and Characterization - field trial of methodology in Hanoi, Vietnam (2014) 37th WEDC International Conference."
-  },
-  {
-    "objectID": "research.html#technical-reports",
-    "href": "research.html#technical-reports",
-    "title": "Research",
-    "section": "Technical Reports",
-    "text": "Technical Reports\n\n\nSFD Promotion Initiative - Final Reports (7 cities) (2015) Sustainable Sanitation Alliance / Eawag-Sandec.\n\n\nRRR-Project: From Research to Implementation, Component 1 - Waste Supply and Availability (2014) Eawag-Sandec."
-  },
-  {
-    "objectID": "research.html#field-research",
-    "href": "research.html#field-research",
-    "title": "Research",
-    "section": "Field Research",
-    "text": "Field Research\nUganda (Kampala) · Tanzania (Dar es Salaam) · Vietnam (Hanoi) · Bangladesh (Khulna) · India · Bhutan · Haiti (Cap-Haïtien) · South Africa (Durban)"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching & Talks",
-    "section": "",
-    "text": "I teach reproducible data science with R and Quarto to newcomers, from graduate courses to free online cohorts and hands-on workshops for scientists and civil servants."
-  },
-  {
-    "objectID": "teaching.html#courses",
-    "href": "teaching.html#courses",
-    "title": "Teaching & Talks",
-    "section": "Courses",
-    "text": "Courses\n\n2024 - 2026 rstatsZH - Data Science mit R (redeveloped, k009-k012). Statistical Office of the Canton of Zurich, Zurich, CH\n2022 - 2026 CVEN 5837/5873/5999 - Data Analytics for Development (4 iterations). University of Colorado Boulder, Boulder, USA (online)\n2025-09 - 2025-12 Data Science for openwashdata (ds4owd), Cohort 2. openwashdata / ETH Zurich\n2022 - 2025 Research Beyond the Lab - Open Science and Research Methods (3 iterations). ETH Zurich, Zurich, CH\n2024-04 Quarto - Authoring and Publishing for Collaborative Scientific Writing. ETH Zurich - Global Health Engineering\n2023-10 - 2024-02 Data Science for openwashdata (ds4owd), Cohort 1. openwashdata / ETH Zurich\n2023-10 Open Science Tools for Collaborative Scientific Writing. ETH Zurich - Global Health Engineering, Zurich, CH\n2021 - 2023 rstatsZH - Data Science mit R (k001-k008). Statistical Office of the Canton of Zurich, Zurich, CH\n2017 Lecturer - Faecal Sludge Management. Mittelhessen University of Applied Sciences (THM), Giessen, DE\n2016 Lecturer - Sanitation MOOC. Massive Open Online Course: Planning & Design of Sanitation Systems and Technologies\n2013 - 2016 Lecturer - Faecal Sludge Management. NADEL (ETH Zurich) & EPF Lausanne, Switzerland"
-  },
-  {
-    "objectID": "teaching.html#workshops",
-    "href": "teaching.html#workshops",
-    "title": "Teaching & Talks",
-    "section": "Workshops",
-    "text": "Workshops\n\n2026-06 Quarto for Collaborative Scientific Writing - RDM Summer School. ETH Zurich, Zurich, CH\n2026-07 Git for Scientists. ETH Zurich - Global Health Engineering, Zurich, CH\n2026-11 Git for Scientists: hands-on workshop. Swiss Research Data Conference (RDC 2026) - SRDSN\n2026-09 Agents for Scientists. ETH Zurich - Global Health Engineering, Zurich, CH\n2025-05 Git for Scientists. CIS, ETH Zurich, Zurich, CH\n2024-06 Quarto for Collaborative Scientific Writing - RDM Summer School. ETH Zurich, Zurich, CH\n2024-11 FAIR Data Publishing. UKZN WASH Centre, UKZN, South Africa\n2023-11 Data Stewardship - SST Educational Workshop. Swiss Toxicology Society (SST), Basel\n2023-10 Reference Management with Zotero. Hubris to Hope (HS23)\n2023-06 open by default - a data management strategy. ETH Research Data Management Summer School, Zurich, CH\n2023-02 Data Stewardship Network Kick-off. ETH Zurich, Zurich, CH\n2021 Data Science for WASH - An opportunity for the sector. Colorado WASH Symposium, online"
-  },
-  {
-    "objectID": "teaching.html#talks-invited-presentations",
-    "href": "teaching.html#talks-invited-presentations",
-    "title": "Teaching & Talks",
-    "section": "Talks & Invited Presentations",
-    "text": "Talks & Invited Presentations\n\n\nFeatured recording: Plan for tomorrow today - a model for data stewardship (ETH Library 17:15 Kolloquium).\n\n2026-05 Hello, I am a Data Steward - ReproducibiliTea Journal Club. University of Zurich\n2026-06 FAIRqual - FAIR data practices for qualitative research. Highlighting Outcomes and Advancing Best Practices in ORD - ETH Domain ORD Programme, Bern, CH\n2026-11 Embedded data stewardship and research intelligence: five years of practice at a research group at ETH Zurich. Swiss Research Data Conference (RDC 2026) - SRDSN\n2026-09 Git for Scientists - so that we can still prove what is human. Data Stewardship Network (DSN) Autumn Community Meeting, ETH Zurich, Zurich, CH\n2025-09 Publishing Open Metadata for ORD Projects of the ETH Domain. Swiss Open Academic Data (SOAD) Day\n2025-06 Hello, I am a Data Steward - Career Talk. Research Software Engineering and Data Stewardship Career Panel\n2025-05 Computational Reproducibility Seminar. Swiss Reproducibility Network (SwissRN)\n2025-05 Plan for tomorrow today - D-USYS Transdisciplinary Lab Brown Bag. ETH Zurich D-USYS TdLab\n2025-05 Open Research Data Program of the ETH Board - open metadata dataset. ETH ORD Programme\n2024-11 Plan for tomorrow today - a model for data stewardship. ETH Library 17:15 Kolloquium\n2024-10 Swiss Research Data Day (SRDD). SRDD\n2024-09 Data Stewardship at Global Health Engineering. ETH Zurich\n2024-06 Plan for tomorrow today - why you need a data steward. Swiss Reproducibility Conference (SwissRN)\n2021-03 Berufsbild EZ Seminar. Albert-Ludwigs-University of Freiburg, Freiburg, DE\n2021 Die datengetriebene Verwaltung: Daten- und Statistikkompetenz für den Kanton Zürich. Conference on Digital Sustainability (DINAcon)\n2020 DINAcon 2020. Conference on Digital Sustainability (DINAcon), online\n2020 UN World Data Forum 2020. United Nations World Data Forum, online\n2019 5th Faecal Sludge Management Conference. FSM5, Cape Town, ZA\n2016 UNC Water and Health Conference. UNC, Chapel Hill, USA\n2016 Sandec Research Seminar. Eawag / Sandec, Duebendorf, CH\n2015 UNC Water and Health Conference. UNC, Chapel Hill, USA\n2015 Stockholm World Water Week. SIWI, Stockholm, SE\n2015 4th AfricaSan Conference. AfricaSan, Dakar, SN\n2015 3rd Faecal Sludge Management Conference. FSM3, Hanoi, VN\n2014 37th WEDC International Conference. WEDC, Hanoi, VN\n2014 Stockholm World Water Week. SIWI, Stockholm, SE\n2013 36th WEDC International Conference. WEDC, Nakuru, KE\n2012 2nd Faecal Sludge Management Conference. FSM2, Durban, ZA\n2012 Water Institute of Southern Africa (WISA) Conference. WISA, Cape Town, ZA"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Occasional writing on data stewardship, open science and reproducible research, mostly on the Global Health Engineering blog.\n\n\n2026-07 Who wrote this? Scientific integrity at ETH Zurich in the age of AI. GHE Blog\n2024-03 Plan for tomorrow today: why you need a data steward. GHE Blog (with E. Tilley)\n2024-02 Motivation for Team Award. GHE Blog\n2024-02 Attention, Prof: You need a data steward for your team. GHE Blog"
   }
 ]
