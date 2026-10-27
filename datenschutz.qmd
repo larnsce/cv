@@ -1,0 +1,42 @@
+---
+title: "Datenschutz"
+lang: de
+format:
+  html:
+    toc: false
+---
+
+Diese Seite erklärt, was mit deinen Daten passiert, wenn du den Newsletter bitz abonnierst, und was beim Besuch dieser Website gespeichert wird. Ich gebe deine Daten nicht weiter und verkaufe sie nicht.
+
+## Wer verantwortlich ist
+
+Lars Schöbitz GmbH (Marke bitz)  
+Eibenstrasse 9  
+8045 Zürich  
+[lars@lse.de](mailto:lars@lse.de)
+
+## Der Newsletter bitz
+
+**Was gespeichert wird.** Wenn du bitz abonnierst, speichert Buttondown in meinem Auftrag deine Mailadresse, deine Antwort auf die Frage "Wo arbeitest du?", den Zeitpunkt der Anmeldung und den Link, über den du dich angemeldet hast, zum Beispiel aus LinkedIn oder aus einer weitergeleiteten Ausgabe. Bei der Anmeldung speichert Buttondown auch deine IP Adresse, um automatische Anmeldungen zu erkennen.
+
+**Wozu.** Die Mailadresse brauche ich, um dir den Newsletter zu schicken. Die Frage nach dem Arbeitsort zeigt mir, ob ich die Menschen erreiche, für die ich schreibe: in Behörden, Hochschulen, internationalen Organisationen, der Privatwirtschaft, in NGOs und selbstständig. Ich werte die Antworten nur zusammengefasst aus. Der Anmeldelink zeigt mir, über welchen Weg Leser:innen zu bitz finden.
+
+**Was ich nicht messe.** Ich messe nicht, ob du eine Ausgabe öffnest, und nicht, welche Links du anklickst. Die Ausgaben enthalten kein Zählpixel, und die Links führen direkt zum Ziel.
+
+**Umfragen und Antworten.** Manche Ausgaben enthalten eine Frage mit Antwortknöpfen. Wenn du antwortest, speichert Buttondown deine Antwort zusammen mit deiner Mailadresse. Wenn du auf eine Ausgabe per Mail antwortest, landet deine Mail in meinem Postfach bei Google Workspace.
+
+**Deine Einwilligung.** Du meldest dich selbst an und bestätigst die Anmeldung über einen Link in einer ersten Mail. Das ist deine Einwilligung. Du kannst sie jederzeit widerrufen, über den Abmeldelink am Ende jeder Ausgabe oder mit einer Mail an mich.
+
+**Wo die Daten liegen.** Buttondown ist ein Anbieter aus den USA (Richmond, Virginia). Die Daten liegen dort. Grundlage für die Übermittlung ist der [Vertrag zur Auftragsverarbeitung von Buttondown](https://buttondown.com/legal/data-processing-agreement) mit den Standardvertragsklauseln der EU und den Ergänzungen für die Schweiz. Buttondown verschickt die Mails über Postmark; alle Dienstleister stehen in der [Liste der Unterauftragsverarbeiter](https://buttondown.com/legal/subprocessors). Die Ausgaben stehen auch im Archiv auf [buttondown.com/bitz](https://buttondown.com/bitz); für den Besuch dort gilt die [Datenschutzerklärung von Buttondown](https://buttondown.com/legal/privacy).
+
+**Wie lange.** Solange du abonniert bist. Nach der Abmeldung bleibt deine Adresse bei Buttondown als abgemeldet gespeichert, damit sie nicht wieder auf die Liste kommt. Wenn du willst, lösche ich sie ganz; schreib mir.
+
+## Diese Website
+
+lse.de liegt bei Netlify (USA). Netlify protokolliert Zugriffe technisch (IP Adresse, Zeitpunkt, aufgerufene Seite) und löscht diese Protokolle nach kurzer Zeit. Für die Besucherstatistik nutze ich Plausible, einen Dienst aus der EU, der keine Cookies setzt und einzelne Personen nicht erkennt. Ich sehe nur zusammengefasste Zahlen.
+
+## Deine Rechte
+
+Du kannst jederzeit erfahren, welche Daten ich über dich habe, sie berichtigen oder löschen lassen und deine Einwilligung widerrufen. Schreib dazu an [lars@lse.de](mailto:lars@lse.de). Du kannst dich auch bei einer Aufsichtsbehörde beschweren: in der Schweiz beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB), in der EU bei der Behörde an deinem Wohnort.
+
+Stand: 27. Oktober 2026

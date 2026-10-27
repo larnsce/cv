@@ -9,6 +9,7 @@ project:
     - media.qmd
     - blog.qmd
     - cv.qmd
+    - datenschutz.qmd
   resources:
     - cv.pdf
 
