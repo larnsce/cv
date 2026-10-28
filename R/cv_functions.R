@@ -86,6 +86,84 @@ first_sentence <- function(x) {
   ifelse(is.na(s), x, trimws(s))
 }
 
+# ---- Typst --------------------------------------------------------------------
+
+#' Escape the characters Typst markup treats specially. URLs never go through
+#' here: they are passed as strings to #link(). Same rule as R/onepager.R.
+typst_esc <- function(x) {
+  x <- gsub("\\\\", "\\\\\\\\", x, perl = TRUE)
+  gsub("([#*_`$<>@\\[\\]~])", "\\\\\\1", x, perl = TRUE)
+}
+
+typst_link <- function(url, label = NULL) {
+  if (is.null(label)) label <- sub("/$", "", sub("^https?://(www\\.)?", "", url))
+  sprintf('#link("%s")[%s]', url, typst_esc(label))
+}
+
+#' Markdown text to Typst markup: [label](url) links become #link() calls, the
+#' rest is escaped.
+md_to_typst <- function(x) {
+  if (is.na(x) || x == "") return("")
+  m <- gregexpr("\\[([^]]+)\\]\\(([^)]+)\\)", x, perl = TRUE)
+  links <- regmatches(x, m)[[1]]
+  parts <- regmatches(x, m, invert = TRUE)[[1]]
+  out <- typst_esc(parts[1])
+  for (i in seq_along(links)) {
+    lab <- sub("\\[([^]]+)\\].*", "\\1", links[i], perl = TRUE)
+    url <- sub(".*\\(([^)]+)\\)$", "\\1", links[i], perl = TRUE)
+    out <- paste0(out, typst_link(url, lab), typst_esc(parts[i + 1]))
+  }
+  out
+}
+
+#' Contact links as a Typst array, for #name-block().
+typst_contacts <- function(cv) {
+  ci <- cv$contact
+  out <- character()
+  for (i in seq_len(nrow(ci))) {
+    v <- ci$contact[i]
+    out <- c(out, switch(ci$icon[i],
+      envelope = typst_link(paste0("mailto:", v), v),
+      globe    = typst_link(v),
+      orcid    = typst_link(paste0("https://orcid.org/", v), paste("ORCID", v)),
+      github   = typst_link(paste0("https://", v), v),
+      linkedin = typst_link(paste0("https://", v), v),
+      typst_link(v)))
+  }
+  # The links sit inside a Typst array (code mode), where #link is plain link.
+  paste0("(", paste(sub("^#", "", out), collapse = ", "), ")")
+}
+
+#' PDF-only: the name block (name, current positions, contact row).
+print_pdf_header <- function(cv, name = "Lars Schöbitz") {
+  if (!isTRUE(knitr::pandoc_to("typst"))) return(invisible())
+  d <- dplyr::filter(cv$entries, section == "work_experience", blank(end))
+  role <- paste(sprintf("%s, %s", typst_esc(d$title), typst_esc(d$institution)), collapse = ". ")
+  cat("\n```{=typst}\n")
+  cat(sprintf("#name-block([%s], [%s.], %s)\n", typst_esc(name), role, typst_contacts(cv)))
+  cat("```\n\n")
+  invisible()
+}
+
+#' One #entry[dates][body] line for a row, Typst output. Block style adds the
+#' description bullets as a Typst list inside the body.
+typst_entry <- function(r, style) {
+  lk <- entry_links(r)
+  ttl <- paste0("*", typst_esc(r$title), "*")
+  if (!is.na(lk$title_href)) ttl <- sprintf('#link("%s")[%s]', lk$title_href, ttl)
+  bits <- c()
+  if (!blank(r$institution)) bits <- c(bits, typst_esc(r$institution))
+  if (!blank(r$loc)) bits <- c(bits, typst_esc(r$loc))
+  body <- paste0(ttl, if (length(bits)) paste0(", ", paste(bits, collapse = ", ")) else "", ".")
+  if (!is.na(lk$more_href)) body <- paste0(body, " ", typst_link(lk$more_href, lk$more_label))
+  if (style == "block") {
+    desc <- unlist(r[grep("^description", names(r))])
+    desc <- desc[!is.na(desc) & desc != ""]
+    if (length(desc)) body <- paste0(body, "\n", paste0("- ", vapply(desc, md_to_typst, character(1)), collapse = "\n"), "\n")
+  }
+  sprintf("#entry[%s][%s]", typst_esc(r$tl), body)
+}
+
 # ---- dates -----------------------------------------------------------------
 
 #' One date at its own precision: "19 November 2026", "November 2026", "2026".
@@ -251,6 +329,15 @@ print_section <- function(cv, section_id, style = "block", limit = NULL,
     st <- grant_status(d$status)
     pending <- st != "funded"
     d$tl[pending] <- proposal_label(st[pending], d$start[pending])
+  }
+
+  # Typst output (the full CV PDF): every entry is a dated grid row, as on the
+  # one-pager, in both styles.
+  if (isTRUE(knitr::pandoc_to("typst"))) {
+    cat("\n```{=typst}\n")
+    for (i in seq_len(nrow(d))) cat(typst_entry(d[i, ], style), "\n")
+    cat("```\n\n")
+    return(invisible())
   }
 
   if (style == "compact") {
@@ -468,16 +555,11 @@ print_explore_cards <- function(cv) {
 
 # ---- PDF and other pages -----------------------------------------------------
 
-#' PDF-only: emit the full header band (contact | technical skills | languages)
-#' as a single Typst #band(...) call. No-op for HTML output.
+#' PDF-only: emit the skills band (technical skills | languages) as a single
+#' Typst #band(...) call. No-op for HTML output. Contacts sit in the name
+#' block (print_pdf_header()).
 print_band <- function(cv, out_of = 5) {
   if (!isTRUE(knitr::pandoc_to("typst"))) return(invisible())
-
-  contact <- paste(vapply(seq_len(nrow(cv$contact)), function(i) {
-    r <- cv$contact[i, ]
-    val <- gsub("\"", "'", r$contact)
-    sprintf("#contact-line(\"%s\", \"%s\")", r$icon, val)
-  }, character(1)), collapse = "\n")
 
   bars <- function(sk) paste(vapply(seq_len(nrow(sk)), function(i) {
     r <- sk[i, ]
@@ -487,7 +569,6 @@ print_band <- function(cv, out_of = 5) {
 
   cat("```{=typst}\n")
   cat("#band(\n")
-  cat("[", contact, "],\n")
   cat("[", bars(cv$tech_skills), "],\n")
   cat("[", bars(cv$skills), "],\n")
   cat(")\n")
