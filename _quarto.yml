@@ -39,9 +39,11 @@ website:
     center: "Lars Schöbitz · Open Science Specialist · ETH Zurich · [lars@lse.de](mailto:lars@lse.de)"
     background: light
 
+brand: onepager/_brand.yml
+
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, brand, assets/theme.scss, assets/landing.scss]
     css: assets/styles.css
     toc: false
     link-external-newwindow: true

@@ -21,7 +21,7 @@ Every website page is a thin `.qmd` that sources the R helpers, calls
 
 | Page | Content |
 |------|---------|
-| `index.qmd` | About: headshot, intro bio, profile links (trestles template) |
+| `index.qmd` | Start page (`page-layout: custom`): hero with portrait, role line, intro and contact links; live numbers; upcoming talks and workshops with full dates, event sites and materials links; recent talks; latest writing; explore cards; contact band. All from the aboutme package through `R/cv_functions.R`. |
 | `research.qmd` | Publications, conference papers, technical reports, research interests, field research |
 | `software.qmd` | Open data & software, grants, awards |
 | `teaching.qmd` | Courses, workshops, talks |
@@ -46,6 +46,13 @@ Every website page is a thin `.qmd` that sources the R helpers, calls
 
 - `assets/styles.css` - site chrome and list patterns (navbar, `pub-list`, `pub-tag`,
   `media-list`, `teaching-table`, `section-intro`, `cv-download-btn`, skill bars).
+- `assets/theme.scss` - maps the bitz brand palette onto the custom properties that
+  `styles.css` reads, and keeps the web base font size at 1rem.
+- `assets/landing.scss` - the start page classes (`lse-` prefix: hero, numbers, cards,
+  rows, tint and band), modelled on the openwashdata and FAIRqual start pages.
+- `onepager/_brand.yml` - the bitz brand file (colours, IBM Plex fonts). The website
+  reads it through `brand:` in `_quarto.yml`, the one-pager's Typst template reads it
+  directly. Keep it equal to bitzgmbh/brand (`diff` against a clone of that repo).
 - `assets/typst-helpers.typ` - Typst helpers (Font Awesome contact lines, skill bars,
   header band) used only by the PDF (`cv-pdf.qmd`).
 - `assets/profile-lars-schoebitz.jpg` - profile photo (About page and favicon).
