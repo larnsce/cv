@@ -138,6 +138,7 @@ h3 {
   transition: background-color 0.15s;
 }
 .cv-download-btn:hover { background-color: var(--accent-hover) !important; color: #fff !important; }
+.cv-download-btn + .cv-download-btn { margin-left: 0.6rem; }
 
 /* Skill bars reused from the CV card on the CV page. */
 .skill-bar {
