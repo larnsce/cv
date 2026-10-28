@@ -1,0 +1,340 @@
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+
+// Start page (index.qmd, page-layout: custom). Layout mechanics follow the
+// openwashdata and FAIRqual start pages; colours come from the bitz brand
+// through $brand-<name>.
+
+// Sections and bands.
+.lse-section {
+  padding: 2.5rem 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+// The site stylesheet underlines every h2 and gives it a top margin; the
+// section padding is the spacing on the start page.
+.lse-section h2,
+.lse-band-inner h2 {
+  font-size: clamp(1.5rem, 4.5vw, 2rem);
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 0 !important;
+  margin-bottom: 1rem;
+}
+
+.lse-tint {
+  background-color: $brand-bitz-teal-bg;
+}
+
+.lse-band {
+  background-color: $brand-bitz-teal;
+  color: $brand-paper;
+}
+
+.lse-band h2,
+.lse-band p,
+.lse-band a {
+  color: $brand-paper;
+}
+
+.lse-band-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+}
+
+.lse-more {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+// Hero: text on the left, the portrait on the right, stacked on phones.
+.lse-hero {
+  background-color: $brand-bitz-teal-bg;
+}
+
+.lse-hero .lse-section {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.lse-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+@media (max-width: 640px) {
+  .lse-hero-grid {
+    grid-template-columns: 1fr;
+    row-gap: 1.25rem;
+  }
+
+  .lse-hero-photo {
+    order: -1;
+  }
+}
+
+.lse-hero h1 {
+  font-size: clamp(2rem, 7.5vw, 3.25rem);
+  line-height: 1.1;
+  color: $brand-bitz-teal;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p.lse-role {
+  font-size: 1.05rem;
+  color: $brand-grey;
+  margin-bottom: 1rem;
+}
+
+.lse-hero p.lse-lead,
+.lse-hero .lse-lead p {
+  font-size: clamp(1.05rem, 3.8vw, 1.3rem);
+  color: $brand-ink;
+  max-width: 34em;
+  margin-bottom: 0.5rem;
+}
+
+.lse-hero-photo img,
+.lse-portrait {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.lse-hero-photo figure,
+.lse-hero-photo .figure,
+.lse-hero-photo p {
+  margin: 0;
+}
+
+// Buttons in the hero.
+.lse-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.lse-actions .btn {
+  border-radius: 2rem;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+}
+
+.lse-actions .btn-primary {
+  background-color: $brand-bitz-teal;
+  border-color: $brand-bitz-teal;
+  color: $brand-paper;
+}
+
+.lse-actions .btn-primary:hover {
+  background-color: $brand-bitz-teal-dark;
+  border-color: $brand-bitz-teal-dark;
+  color: $brand-paper;
+}
+
+.lse-actions .btn-outline {
+  background: transparent;
+  border: 2px solid $brand-bitz-teal;
+  color: $brand-bitz-teal;
+}
+
+.lse-actions .btn-outline:hover {
+  background-color: $brand-bitz-teal;
+  color: $brand-paper;
+}
+
+// Contact links: one row of icon plus text, wrapping on phones.
+p.lse-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+p.lse-contact a {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+p.lse-contact i {
+  margin-right: 0.3rem;
+}
+
+.lse-band p.lse-contact {
+  font-size: 1.05rem;
+}
+
+.lse-band p.lse-contact a {
+  color: $brand-paper;
+}
+
+// Numbers strip: a white card on the hero tint, one row on wide screens,
+// stacked on phones.
+.lse-numbers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  text-align: center;
+  background-color: $brand-paper;
+  border: 1px solid $brand-bitz-teal-light;
+  border-radius: 0.75rem;
+  padding: 1.75rem 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .lse-numbers {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 641px) {
+  .lse-number-item + .lse-number-item {
+    border-left: 1px solid $brand-grey-light;
+  }
+}
+
+.lse-number {
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 700;
+  color: $brand-bitz-teal;
+  line-height: 1.1;
+}
+
+.lse-number-label {
+  font-size: 0.95rem;
+  color: $brand-grey;
+}
+
+// Cards in a responsive grid: one column on phones, three on desktop.
+.lse-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.lse-cards-explore {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.lse-card {
+  display: block;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid $brand-grey-light;
+  border-radius: 0.75rem;
+  background-color: $brand-paper;
+  color: $brand-ink;
+  text-decoration: none;
+}
+
+a.lse-card:hover {
+  border-color: $brand-bitz-teal;
+  text-decoration: none;
+  color: $brand-ink;
+}
+
+.lse-card-kicker {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $brand-bitz-rust;
+  margin-bottom: 0.25rem;
+}
+
+.lse-card strong {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  color: $brand-bitz-teal;
+  margin-bottom: 0.35rem;
+}
+
+.lse-card strong a {
+  color: $brand-bitz-teal;
+}
+
+.lse-card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+p.lse-card-meta {
+  color: $brand-grey;
+}
+
+.lse-card-more {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+// Rows for the latest writing: date, then title, in the body text size.
+.lse-rows {
+  display: block;
+}
+
+.lse-row {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  column-gap: 1rem;
+  align-items: baseline;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid $brand-grey-light;
+  color: $brand-ink;
+  text-decoration: none;
+}
+
+.lse-row:last-child {
+  border-bottom: 0;
+}
+
+a.lse-row:hover {
+  text-decoration: none;
+}
+
+a.lse-row:hover .lse-row-title {
+  text-decoration: underline;
+}
+
+@media (max-width: 575px) {
+  .lse-row {
+    grid-template-columns: 1fr;
+    row-gap: 0.15rem;
+  }
+}
+
+.lse-row-date {
+  font-size: 0.95rem;
+  color: $brand-grey;
+}
+
+.lse-row-title {
+  font-weight: 600;
+  color: $brand-bitz-teal;
+}
+
+.lse-row-meta {
+  grid-column: 2;
+  font-size: 0.9rem;
+  color: $brand-grey;
+}
+
+@media (max-width: 575px) {
+  .lse-row-meta {
+    grid-column: 1;
+  }
+}

@@ -33,7 +33,7 @@ Eibenstrasse 9
 
 ## Diese Website
 
-lse.de liegt bei Netlify (USA). Netlify protokolliert Zugriffe technisch (IP Adresse, Zeitpunkt, aufgerufene Seite) und löscht diese Protokolle nach kurzer Zeit. Für die Besucherstatistik nutze ich Plausible, einen Dienst aus der EU, der keine Cookies setzt und einzelne Personen nicht erkennt. Ich sehe nur zusammengefasste Zahlen.
+lse.de liegt bei Netlify (USA). Netlify protokolliert Zugriffe technisch (IP Adresse, Zeitpunkt, aufgerufene Seite) und löscht diese Protokolle nach kurzer Zeit. Für die Besucherstatistik nutze ich Plausible, einen Dienst aus der EU, der keine Cookies setzt und einzelne Personen nicht erkennt. Ich sehe nur zusammengefasste Zahlen. Die Schriften IBM Plex Sans und IBM Plex Mono lädt dein Browser von Google Fonts (Google LLC, USA); dabei erhält Google deine IP Adresse.
 
 ## Deine Rechte
 

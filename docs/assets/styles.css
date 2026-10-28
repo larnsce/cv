@@ -1,22 +1,12 @@
 /* =========================================
    Lars Schöbitz - Personal Website Styles
-   Ported list/table/media patterns from the janfreihardt concept,
-   adapted to a blue accent matching the CV's link colour.
+   List, table and media patterns for the inner pages. Colours and fonts come
+   from the bitz brand: assets/theme.scss maps the brand palette onto the
+   custom properties used below (--accent and friends).
    ========================================= */
-
-:root {
-  --accent:        #1a5e8a;
-  --accent-hover:  #12455f;
-  --accent-light:  #eef4f8;
-  --accent-border: #cfe0ec;
-  --text-dark:     #1c2733;
-  --text-muted:    #5a6a78;
-}
 
 /* ----- Global ----- */
 body {
-  color: #222;
-  font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -63,19 +53,6 @@ h3 {
   font-size: 1.15rem;
 }
 
-/* ----- About / Trestles template ----- */
-.about-links .about-link {
-  border: 1px solid var(--accent-border) !important;
-  color: var(--accent) !important;
-  background-color: #fff;
-  transition: background-color 0.15s, color 0.15s;
-}
-.about-links .about-link:hover {
-  background-color: var(--accent-light) !important;
-  color: var(--accent-hover) !important;
-  border-color: var(--accent) !important;
-}
-
 /* ----- Publication list ----- */
 .pub-list { list-style: none; padding-left: 0; }
 .pub-list li {
@@ -109,7 +86,7 @@ h3 {
 }
 .teaching-table td {
   padding: 0.45rem 0.75rem;
-  border-bottom: 1px solid #e6eef4;
+  border-bottom: 1px solid var(--accent-light);
   vertical-align: top;
 }
 .teaching-table tr:last-child td { border-bottom: none; }
@@ -118,7 +95,7 @@ h3 {
 .media-list { list-style: none; padding-left: 0; }
 .media-list li {
   padding: 0.5rem 0;
-  border-bottom: 1px solid #e6eef4;
+  border-bottom: 1px solid var(--accent-light);
   line-height: 1.5;
 }
 .media-list li:last-child { border-bottom: none; }
@@ -164,16 +141,3 @@ h3 {
   margin-bottom: 1.5rem;
   max-width: 720px;
 }
-
-/* ----- Upcoming events box (About page) ----- */
-div.callout.callout-note.upcoming-box {
-  border-left-color: var(--accent);
-  background-color: var(--accent-light);
-  margin: 1.5rem 0;
-}
-.upcoming-box .callout-title-container {
-  color: var(--text-dark);
-  font-weight: 600;
-}
-.upcoming-box ul { margin-bottom: 0; }
-.upcoming-box li { margin-bottom: 0.4rem; }

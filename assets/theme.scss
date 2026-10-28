@@ -1,0 +1,20 @@
+/*-- scss:defaults --*/
+
+// Colours and fonts come from the bitz brand (onepager/_brand.yml), which
+// Quarto loads before this file; palette entries are available as
+// $brand-<name>. The brand base size (10.5pt) is a print size, so the web
+// keeps the browser default.
+$font-size-base: 1rem;
+
+/*-- scss:rules --*/
+
+// Bridge for assets/styles.css, which predates the brand and reads these
+// custom properties on every page.
+:root {
+  --accent: #{$brand-bitz-teal};
+  --accent-hover: #{$brand-bitz-teal-dark};
+  --accent-light: #{$brand-bitz-teal-bg};
+  --accent-border: #{$brand-bitz-teal-light};
+  --text-dark: #{$brand-ink};
+  --text-muted: #{$brand-grey};
+}
