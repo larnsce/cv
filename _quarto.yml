@@ -12,6 +12,7 @@ project:
     - datenschutz.qmd
   resources:
     - cv.pdf
+    - onepager/cv-onepager.pdf
 
 website:
   title: "Lars Schöbitz"

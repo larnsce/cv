@@ -56,11 +56,13 @@ Every website page is a thin `.qmd` that sources the R helpers, calls
 ./render.sh
 ```
 
-This runs two steps: it renders `cv-pdf.qmd` to `cv.pdf` at the repo root, then renders
-the website into `docs/` (which picks up `cv.pdf` as a declared resource so the CV
-page's download button resolves). The root `cv.pdf` is a gitignored build intermediate;
-`docs/cv.pdf` is the single tracked copy. `docs/` is committed and is what Netlify
-serves.
+This runs three steps: it renders `cv-pdf.qmd` to `cv.pdf` at the repo root, renders
+`onepager/cv-onepager.qmd` to `onepager/cv-onepager.pdf` (the one-page CV and
+publication list), then renders the website into `docs/` (which picks up both PDFs as
+declared resources so the two download buttons on the CV page resolve). The root
+`cv.pdf` and `onepager/cv-onepager.pdf` are gitignored build intermediates;
+`docs/cv.pdf` and `docs/onepager/cv-onepager.pdf` are the tracked copies. `docs/` is
+committed and is what Netlify serves.
 
 To refresh harvested source data (optional): `Rscript scripts/harvest.R` re-pulls ORCID
 works and GitHub org repos into `data/staging/` for review. Curated content stays in

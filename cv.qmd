@@ -13,8 +13,9 @@ cv <- create_cv()
 ```
 
 <a href="cv.pdf" class="cv-download-btn" download>&darr; Download CV (PDF)</a>
+<a href="onepager/cv-onepager.pdf" class="cv-download-btn" download>&darr; Download one-page CV (PDF)</a>
 
-This page is a summary. The full lists live on the [Research](research.qmd), [Software & Data](software.qmd), and [Teaching & Talks](teaching.qmd) pages, or in the PDF above.
+This page is a summary. The full lists live on the [Research](research.qmd), [Software & Data](software.qmd), and [Teaching & Talks](teaching.qmd) pages, or in the full CV (PDF) above. The one-page CV is the short version for applications, with a one-page publication list on its second page.
 
 ## Work Experience
 
