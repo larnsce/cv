@@ -1,13 +1,13 @@
 ---
-title: "Lars Schöbitz - CV"
+brand: onepager/_brand.yml
 format:
   typst:
     output-file: cv.pdf
     papersize: a4
     margin:
       x: 1.6cm
-      y: 1.6cm
-    fontsize: 10pt
+      y: 1.5cm
+    fontsize: 9.5pt
     include-in-header: assets/typst-helpers.typ
 execute:
   echo: false
@@ -25,95 +25,99 @@ source("R/cv_functions.R")
 cv <- create_cv()
 ```
 
+```{r header, results='asis'}
+print_pdf_header(cv)
+```
+
 ```{r intro, results='asis'}
 print_text_block(cv, "intro")
 ```
 
-View this CV online at [www.lse.de](https://www.lse.de).
+This CV is rendered from the aboutme data package; the online version and a one-page CV are at [www.lse.de/cv.html](https://www.lse.de/cv.html).
 
 ```{r band, results='asis'}
 print_band(cv)
 ```
 
-# Work Experience {data-icon="laptop"}
+# Work experience
 
 ```{r work, results='asis'}
 print_section(cv, "work_experience")
 ```
 
-# Education {data-icon="graduation-cap"}
+# Education
 
 ```{r education, results='asis'}
 print_section(cv, "education")
 ```
 
-# Open Data & Software {data-icon="database"}
+# Open data and software
 
 ```{r open-data, results='asis'}
 print_section(cv, "open_data_software")
 ```
 
-# Teaching {data-icon="chalkboard-teacher"}
+# Teaching
 
 ```{r teaching, results='asis'}
 print_section(cv, "teaching", style = "compact")
 ```
 
-# Workshops {data-icon="users"}
+# Workshops
 
 ```{r workshops, results='asis'}
 print_section(cv, "workshops", style = "compact")
 ```
 
-# Talks {data-icon="microphone"}
+# Talks
 
 ```{r talks, results='asis'}
 print_section(cv, "talks", style = "compact")
 ```
 
-# Blog & Writing {data-icon="pen-nib"}
+# Blog and writing
 
 ```{r blog, results='asis'}
 print_section(cv, "blog", style = "compact")
 ```
 
-# Publications {data-icon="book"}
+# Publications
 
 ```{r publications, results='asis'}
 print_section(cv, "publications")
 ```
 
-# Conference Papers {data-icon="file-lines"}
+# Conference papers
 
 ```{r conf-papers, results='asis'}
 print_section(cv, "conference_papers")
 ```
 
-# Technical Reports {data-icon="bookmark"}
+# Technical reports
 
 ```{r reports, results='asis'}
 print_section(cv, "technical_reports")
 ```
 
-# Grants & Funding {data-icon="hand-holding-dollar"}
+# Grants and funding
 
 ```{r grants, results='asis'}
 print_section(cv, "grants", status = "funded")
 ```
 
-# Proposals {data-icon="file-signature"}
+# Proposals
 
 ```{r proposals, results='asis'}
 print_section(cv, "grants", status = c("submitted", "unsuccessful"))
 ```
 
-# Awards {data-icon="trophy"}
+# Awards
 
 ```{r awards, results='asis'}
 print_section(cv, "awards")
 ```
 
-# Professional Roles {data-icon="award"}
+# Professional roles
 
 ```{r roles, results='asis'}
 print_section(cv, "professional_roles")

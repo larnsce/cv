@@ -53,8 +53,9 @@ Every website page is a thin `.qmd` that sources the R helpers, calls
 - `onepager/_brand.yml` - the bitz brand file (colours, IBM Plex fonts). The website
   reads it through `brand:` in `_quarto.yml`, the one-pager's Typst template reads it
   directly. Keep it equal to bitzgmbh/brand (`diff` against a clone of that repo).
-- `assets/typst-helpers.typ` - Typst helpers (Font Awesome contact lines, skill bars,
-  header band) used only by the PDF (`cv-pdf.qmd`).
+- `assets/typst-helpers.typ` - Typst template for the full CV PDF (`cv-pdf.qmd`) on the
+  bitz brand: name block, uppercase section headings, dated entry grid, skill bars,
+  footer. It mirrors `onepager/onepager.typ`, so both PDFs look alike.
 - `assets/profile-lars-schoebitz.jpg` - profile photo (About page and favicon).
 
 ## Building
