@@ -38,7 +38,9 @@
   #v(-0.35em)
   #text(size: 1.02em)[#role]
   #v(-0.3em)
-  #text(size: 0.9em, fill: muted)[#contacts.join([ #h(0.45em) · #h(0.45em) ])]
+  // Each contact sits in a box, so a long address or link never breaks inside;
+  // the row wraps between items instead.
+  #text(size: 0.9em, fill: muted)[#contacts.map(c => box(c)).join([ #h(0.45em) · #h(0.45em) ])]
   #v(0.15em)
   #line(length: 100%, stroke: 0.6pt + rule)
 ]
