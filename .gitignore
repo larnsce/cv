@@ -64,3 +64,9 @@ data/staging/
 **/*.quarto_ipynb
 
 .DS_Store
+# one-page CV and publication list (onepager/): render intermediates and the PDF,
+# which is exported by hand into the application that asked for it
+/onepager/*.pdf
+/onepager/*_files/
+/onepager/cv-onepager.typ
+/onepager/.quarto/

@@ -1,0 +1,61 @@
+# bitz brand definition. Single source of truth for colours, typography and
+# logo roles, in the brand.yml format that Quarto, bslib and the brand.yml R
+# package read. Filled in through the issues of this repo; see README.md.
+meta:
+  name: bitz
+  link:
+    github: https://github.com/bitzgmbh
+
+color:
+  palette:
+    # Teal family: the identity colour and its shades (issue 2).
+    # Contrast on paper, rounded: bitz-teal 7.3:1, bitz-teal-dark 12:1.
+    bitz-teal: "#005f73"
+    bitz-teal-dark: "#003d4a"
+    # Light shade: rules, bars and backgrounds only, 3.7:1 on paper, not for text.
+    bitz-teal-light: "#0a9396"
+    # Very light tint of the teal: code and table backgrounds, callouts.
+    bitz-teal-bg: "#e6f1f3"
+    # Accent for emphasis where the teal is already in use. 5.5:1 on paper.
+    bitz-rust: "#bb3e03"
+    # Core text and surface tokens.
+    ink: "#1e1e1e"
+    paper: "#ffffff"
+    # Muted text, captions and table rules. grey reaches 6.7:1 on paper,
+    # grey-light is for rules and bars only.
+    grey: "#5c5c5c"
+    grey-light: "#d9d9d9"
+  foreground: ink
+  background: paper
+  primary: bitz-teal
+  secondary: grey
+  tertiary: bitz-teal-bg
+  light: paper
+  dark: bitz-teal-dark
+
+typography:
+  fonts:
+    - family: IBM Plex Sans
+      source: google
+      weight: [400, 600, 700]
+      style: [normal, italic]
+    - family: IBM Plex Mono
+      source: google
+      weight: [400, 500]
+  base:
+    family: IBM Plex Sans
+    size: 10.5pt
+    line-height: 1.4
+  headings:
+    family: IBM Plex Sans
+    weight: 600
+    color: primary
+    line-height: 1.2
+  monospace:
+    family: IBM Plex Mono
+    size: 0.9em
+  link:
+    color: primary
+    decoration: none
+
+# logo: see issue "Wordmark"
