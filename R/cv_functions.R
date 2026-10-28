@@ -32,17 +32,18 @@ create_cv <- function() {
     paste0("- ", paste(r, collapse = "\n- "))
   })
 
-  # Sort newest first by `end`, then `start`. A blank end means either "current"
-  # (has a start) or "undated" (no start): current sorts to the top, undated to
-  # the bottom.
-  yr <- function(x) suppressWarnings(as.integer(str_extract(as.character(x), "(19|20)\\d{2}")))
+  # Sort newest first by `end`, then `start`, on the date strings themselves
+  # (2026-10-20 sorts after 2026-09 and 2026, so day, month and year rows
+  # interleave by time). A blank end means either "current" (has a start) or
+  # "undated" (no start): current sorts to the top, undated to the bottom.
+  key <- function(x) ifelse(is.na(x) | x == "", "", as.character(x))
   entries <- entries |>
     mutate(
-      .start = yr(start),
+      .start = key(start),
       .end = dplyr::case_when(
-        !is.na(end) & end != "" ~ yr(end),
-        !is.na(.start)          ~ 9999L,   # current
-        TRUE                    ~ -1L       # undated -> bottom
+        key(end) != ""   ~ key(end),
+        .start != ""     ~ "9999",   # current
+        TRUE             ~ ""        # undated -> bottom
       )
     ) |>
     arrange(desc(.end), desc(.start))
