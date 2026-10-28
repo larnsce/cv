@@ -21,6 +21,10 @@ echo "==> Rendering one-page CV (onepager/cv-onepager.qmd -> onepager/cv-onepage
 (cd onepager && "$QUARTO" render cv-onepager.qmd --to typst)
 
 echo "==> Rendering website (-> docs/)"
+# The site pages read the aboutme package, not files in this repo, so Quarto's
+# freeze cache (freeze: auto) would keep stale page output when only the
+# package changed. Drop the cache so every page re-executes.
+rm -rf _freeze
 "$QUARTO" render
 
 echo "Done: docs/ site built, cv.pdf and onepager/cv-onepager.pdf shipped into docs/"
