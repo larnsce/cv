@@ -1,0 +1,145 @@
+---
+format:
+  typst:
+    output-file: cv-onepager.pdf
+    papersize: a4
+    margin:
+      x: 1.6cm
+      y: 1.5cm
+    fontsize: 9.5pt
+    include-in-header: onepager.typ
+execute:
+  echo: false
+  warning: false
+  message: false
+knitr:
+  opts_chunk:
+    dev: "ragg_png"
+---
+
+```{r setup}
+#| fig.keep: "none"
+knitr::opts_chunk$set(fig.keep = "none")
+source("../R/onepager.R")
+
+work <- section_rows("work_experience")
+current <- work |> filter(is.na(end) | end == "")
+# The one page keeps the positions that tell the sanitation data story and the
+# origin of the rstatsZH course; the short intern and consultant stints stay in
+# the full CV (cv-pdf.qmd).
+previous_keys <- tibble::tribble(
+  ~institution,                                 ~start,
+  "Aquaconsult Limited",                        "2018",
+  "Inter-American Development Bank",            "2019",
+  "Biomass Controls PBC",                       "2017",
+  "World Health Organization",                  "2016",
+  "Eawag / Sandec",                             "2012",
+  "PRG, University of KwaZulu-Natal",           "2011",
+  "Statistical Office of the Canton of Zurich", "2021"
+)
+previous <- work |> semi_join(previous_keys, by = c("institution", "start"))
+edu      <- section_rows("education") |> filter(str_detect(title, "Dipl|RStudio"))
+roles    <- section_rows("professional_roles")
+grants   <- section_rows("grants") |> filter(is.na(status) | status == "funded")
+awards   <- section_rows("awards")
+# Courses since 2021; rows whose start equals their end are one-off workshops
+# and stay in the full CV.
+teaching <- section_rows("teaching") |>
+  filter(as.integer(substr(ifelse(is.na(end) | end == "", "9999", end), 1, 4)) >= 2021,
+         is.na(end) | end != start)
+
+text_block <- function(loc) aboutme::text_blocks$text[aboutme::text_blocks$loc == loc]
+
+contact_links <- function() {
+  ci <- aboutme::contact_info
+  out <- character()
+  for (i in seq_len(nrow(ci))) {
+    v <- ci$contact[i]
+    out <- c(out, switch(ci$icon[i],
+      envelope = typst_link(paste0("mailto:", v), v),
+      globe    = typst_link(v),
+      orcid    = typst_link(paste0("https://orcid.org/", v), paste("ORCID", v)),
+      github   = typst_link(paste0("https://", v), v),
+      linkedin = typst_link(paste0("https://", v), v),
+      typst_link(v)))
+  }
+  # The links sit inside a Typst array (code mode), where #link is plain link.
+  paste0("(", paste(sub("^#", "", out), collapse = ", "), ")")
+}
+position_line <- paste(sprintf("%s, %s", typst_esc(current$title), typst_esc(current$institution)),
+                       collapse = ". ")
+```
+
+```{r header, results='asis'}
+cat("\n```{=typst}\n")
+cat(sprintf("#name-block([Lars Schöbitz], [%s.], %s)\n", position_line, contact_links()))
+cat("```\n\n")
+cat(text_block("intro"), "\n\n")
+```
+
+# Current positions
+
+```{r current, results='asis'}
+print_entries(current, \(r) body_position(r, describe = TRUE))
+```
+
+# Previous positions
+
+```{r previous, results='asis'}
+print_entries(previous, body_position)
+```
+
+# Education
+
+```{r education, results='asis'}
+print_entries(edu, body_education)
+```
+
+# Professional roles
+
+```{r roles, results='asis'}
+print_entries(roles, body_role)
+```
+
+# Grants and awards
+
+```{r grants, results='asis'}
+cat(text_block("grants_aside"), "\n\n")
+print_entries(grants, body_grant)
+print_entries(awards, \(r) sprintf("*%s*, %s.", typst_esc(r$title), typst_esc(r$institution)))
+```
+
+# Teaching
+
+```{r teaching, results='asis'}
+print_entries(teaching, body_teaching)
+```
+
+{{< pagebreak >}}
+
+# Publications and outputs
+
+## Articles
+
+```{r articles, results='asis'}
+print_pubs(pubs(c("Article", "Misc")))
+```
+
+## Conference papers
+
+```{r papers, results='asis'}
+print_pubs(pubs("InProceedings"))
+```
+
+## Technical reports
+
+```{r reports, results='asis'}
+print_outputs(section_rows("technical_reports"))
+```
+
+## Open data, software and courses
+
+```{r outputs, results='asis'}
+# The AGUASAN row is a topic proposal under review, not a published output.
+print_outputs(section_rows("open_data_software") |> filter(!str_detect(title, "AGUASAN")))
+```
